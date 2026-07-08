@@ -14854,7 +14854,8 @@ if (spell.higherLevels) {
 } else {
   higherSection.style.display = "none";
 }
-
+      document.getElementById("spell-card").style.display = "none";
+      document.getElementById("higher-levels-section").style.display = "none";
       const card = document.getElementById("spell-card");
       card.style.display = "block";
       card.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -14902,7 +14903,8 @@ if (item.armorClass) statsTable.innerHTML += `<tr><td>Armor Class:</td><td>&nbsp
 if (item.properties) statsTable.innerHTML += `<tr><td>Properties:</td><td>&nbsp;${item.properties}</td></tr>`;
 if (item.weight)     statsTable.innerHTML += `<tr><td>Weight:</td><td>&nbsp;${item.weight}</td></tr>`;
 
-  closeAllCards();
+  document.getElementById("equipment-card").style.display = "none";
+  document.getElementById("rule-card").style.display = "none";
   const card = document.getElementById("equipment-card");
   card.style.display = "block";
   card.scrollIntoView({ behavior: "smooth", block: "start" });

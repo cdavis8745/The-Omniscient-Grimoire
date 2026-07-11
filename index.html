@@ -1460,6 +1460,20 @@ and saving throws made with that ability.</p>
   },
 
   {  
+    name:        "Booming Blade",
+    category:    "Spell",
+    level:       "Cantrip",
+    school:      "Evocation",
+    ritual:      false,
+    castingTime: "Action",
+    range:       "Self",
+    components:  "S, M",
+    duration:    "1 round",
+    description: "You brandish the weapon used in the spell’s casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack’s normal effects and then becomes sheathed in booming energy until the start of your next turn. If the target willingly moves 5 feet or more before then, the target takes 1d8 thunder damage, and the spell ends.",
+    higherLevels:"At 5th level, the melee attack deals an extra 1d8 thunder damage to the target on a hit, and the damage the target takes for moving increases to 2d8. Both damage rolls increase by 1d8 at 11th level (2d8 and 3d8) and again at 17th level (3d8 and 4d8).",
+  },
+
+  {  
     name:        "Blur",
     category:    "Spell",
     level:       "2nd-level",
@@ -6943,6 +6957,13 @@ const rules = [
   <tr><td>97&ndash;00</td><td>While attuned to the Artifact, you can't spend Hit Point Dice or regain Hit Points.</td></tr>
 </table>`
 },
+
+{
+ name:        "Burning",
+ category:    "Rule",
+ description: "A burning creature or object takes ld4 Fire damage at the start of each of its turns. As an action, you can extinguish fire on yourself by giving yourself the Prone condition and rolling on the ground. The fire also goes out if it is doused, submerged, or suffocated. ",
+},
+
 ];
     
 const equipment = [

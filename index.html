@@ -24499,12 +24499,295 @@ const creatures = [
     { name: "Longbow", desc: `Ranged Attack Roll: +5, range 150/600 ft. Hit: 7 (1d8 + 3) Piercing damage, plus 3 (1d6) Piercing damage if the attack roll had Advantage, and it has the Poisoned condition until the end of the lizardfolk's next turn.` }
   ],
   bonusActions:    [
-    { name: "Nimble Escape", desc: `The lizardfolk takes the Disengage or Hide action.                                                                                                                          Werebear, Dire Medium or Small Monstrosity (Lycanthrope), Neutral Good AC 15 Initiative +3 (13) HP 187 (22d8 + 88) Speed 30 ft., 40 ft. (bear form only), Climb 30 ft. (bear form only) MOD SAVE MOD SAVE MOD SAVE Str 21 +5 +5 Dex 10 +0 +0 Con 19 +4 +4 Int 11 +0 +0 Wis 14 +2 +2 Cha 12 +1 +1 Skills Perception +8 Gear Handaxes (4) Senses Darkvision 60 ft.; Passive Perception 18 Languages Common (can’t speak in bear form) CR 7 (XP 2,900; PB +3)` }
+    { name: "Nimble Escape", desc: `The lizardfolk takes the Disengage or Hide action.                                                                                                                    ` }
   ],
   reactions:       [],
   legendary:       []
 },
 
+{
+  name:            "Werebear, Dire",
+  category:        "Creature",
+  type:            "Medium or Small Monstrosity (Lycanthrope)",
+  alignment:       "Neutral Good",
+  cr:              "7 (XP 2,900; PB +3)",
+  initiative:      "+3 (13)",
+  ac:              "15",
+  hp:              "187 (22d8 + 88)",
+  speed:           "30 ft., 40 ft. (bear form only), Climb 30 ft. (bear form only)",
+  str: "21 (+5) +5", dex: "10 (+0) +0", con: "19 (+4) +4",
+  int: "11 (+0) +0", wis: "14 (+2) +2", cha: "12 (+1) +1",
+  gear:            "Handaxes (4)",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +8",
+  senses:          "Darkvision 60 ft.; Passive Perception 18",
+  languages:       "Common (can’t speak in bear form)",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The werebear makes three attacks, using Handaxe or Rend in any combination. It can replace one attack with a Bite attack.` },
+    { name: "Bite (Bear or Hybrid Form Only)", desc: `Melee Attack Roll: +8, reach 5 ft. Hit: 18 (2d12 + 5) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 15. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Werebear under the DM’s control and has 10 Hit Points. Success: The target is immune to this werebear’s curse for 24 hours.` },
+    { name: "Handaxe (Humanoid or Hybrid Form Only)", desc: `Melee or Ranged Attack Roll: +8, reach 5 ft. or range 20/60 ft. Hit: 15 (3d6 + 5) Slashing damage.` },
+    { name: "Rend (Bear or Hybrid Form Only)", desc: `Melee Attack Roll: +8, reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage.` }
+  ],
+  bonusActions:    [
+    { name: "Shape-Shift", desc: `The werebear shape-shifts into a Large dire bear-humanoid hybrid form or a Large dire bear, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Wereboar, Dire",
+  category:        "Creature",
+  type:            "Medium or Small Monstrosity (Lycanthrope)",
+  alignment:       "Neutral Good",
+  cr:              "6 (XP 2,300; PB +3)",
+  initiative:      "+3 (13)",
+  ac:              "16",
+  hp:              "161 (19d8 + 76)",
+  speed:           "30 ft., 40 ft. (boar form only)",
+  str: "19 (+4) +4", dex: "10 (+0) +0", con: "18 (+4) +4",
+  int: "10 (+0) +0", wis: "13 (+1) +1", cha: "8 (-1) -1",
+  gear:            "Javelins (6)",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +4",
+  senses:          "Passive Perception 14",
+  languages:       "Common (can’t speak in boar form)",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The wereboar makes three attacks, using Javelin or Tusk in any combination. It can replace one attack with a Gore attack.` },
+    { name: "Gore (Boar or Hybrid Form Only)", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 15 (2d10 + 4) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 15. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Wereboar under the DM’s control and has 10 Hit Points. Success: The target is immune to this wereboar’s curse for 24 hours.` },
+    { name: "Javelin (Humanoid or Hybrid Form Only)", desc: `Melee or Ranged Attack Roll: +7, reach 5 ft. or range 30/120 ft. Hit: 14 (3d6 + 4) Piercing damage.` },
+    { name: "Tusk (Boar or Hybrid Form Only)", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 13 (2d8 + 4) Piercing damage. If the target is a Medium or smaller creature and the wereboar moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 (2d6) Piercing damage and has the Prone condition.` }
+  ],
+  bonusActions:    [
+    { name: "Shape-Shift", desc: `The wereboar shape-shifts into a Large dire boar-humanoid hybrid form or a Large dire boar, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Wererat Captain",
+  category:        "Creature",
+  type:            "Medium or Small Monstrosity (Lycanthrope)",
+  alignment:       "Lawful Evil",
+  cr:              "4 (XP 1,100; PB +2)",
+  initiative:      "+2 (12)",
+  ac:              "19",
+  hp:              "97 (15d8 + 30)",
+  speed:           "30 ft., Climb 30 ft.",
+  str: "16 (+3) +3", dex: "14 (+2) +2", con: "14 (+2) +2",
+  int: "12 (+1) +1", wis: "12 (+1) +1", cha: "10 (+0) +0",
+  gear:            "Half Plate Armor, Hand Crossbow, Rapier, Shield",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +5, Stealth +4",
+  senses:          "Darkvision 60 ft.; Passive Perception 15",
+  languages:       "Common (can’t speak in rat form)",
+  traits:          [
+    { name: "Marshal Allies", desc: `Allies of the wererat’s choice (excluding itself) in a 10-foot Emanation originating from it have Advantage on attack rolls and saving throws. It can’t use this trait if it has the Incapacitated condition.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The wererat makes two attacks, using Rapier or Hand Crossbow in any combination. It can replace one attack with a Bite attack.` },
+    { name: "Bite (Rat or Hybrid Form Only)", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 8 (2d4 + 3) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 12. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Wererat under the DM’s control and has 10 Hit Points. Success: The target is immune to this wererat’s curse for 24 hours.` },
+    { name: "Rapier", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 12 (2d8 + 3) Piercing damage, and the wererat has Advantage on the next attack roll it makes against the target before the end of this turn.` },
+    { name: "Hand Crossbow (Humanoid or Hybrid Form Only)", desc: `Ranged Attack Roll: +4, range 30/120 ft. Hit: 5 (1d6 + 2) Piercing damage.` }
+  ],
+  bonusActions:    [
+    { name: "Shape-Shift", desc: `The wererat shape-shifts into a Medium rat-humanoid hybrid or a Small rat, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+
+{
+  name:            "Wererat Pack Lord",
+  category:        "Creature",
+  type:            "Medium or Small Monstrosity (Lycanthrope)",
+  alignment:       "Lawful Evil",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+4 (14)",
+  ac:              "14",
+  hp:              "120 (16d8 + 48)",
+  speed:           "30 ft., Climb 30 ft.",
+  str: "10 (+0) +0", dex: "18 (+4) +4", con: "16 (+3) +3",
+  int: "12 (+1) +1", wis: "14 (+2) +2", cha: "10 (+0) +0",
+  gear:            "",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +8, Stealth +7",
+  senses:          "Darkvision 60 ft.; Passive Perception 18",
+  languages:       "Common (can’t speak in rat form)",
+  traits:          [
+    { name: "Packmaster", desc: `Allies of the wererat in a 20-foot Emanation originating from it that have less Hit Points than the wererat have Advantage on attack rolls and saving throws. It can’t use this trait if it has the Frightened or Incapacitated condition.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The wererat makes three attacks, using Scratch or Hand Crossbow in any combination. It can replace one attack with a Bite attack or a use of Packmaster's Strike.` },
+    { name: "Bite (Rat or Hybrid Form Only)", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 9 (2d4 + 4) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 14. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Wererat under the DM’s control and has 10 Hit Points. Success: The target is immune to this wererat’s curse for 24 hours.` },
+    { name: "Scratch", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 7 (1d6 + 4) Slashing damage.` },
+    { name: "Packmaster's Strike", desc: `One ally that can see or hear the wererat can take a Reaction to make one melee attack at a target the wererat chooses. If the attack hits and the target isn't larger than the ally, the target has the Prone condition.` },
+    { name: "Hand Crossbow (Humanoid or Hybrid Form Only)", desc: `Ranged Attack Roll: +7, range 30/120 ft. Hit: 7 (1d6 + 4) Piercing damage.` }
+  ],
+  bonusActions:    [
+    { name: "Shape-Shift", desc: `The wererat shape-shifts into a Medium rat-humanoid hybrid or a Small giant rat, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.` },
+    { name: "Summon Giant Rats (Recharge after a Short or Long Rest)", desc: `3d6 giant rats appear in unoccupied spaces within 30 feet of the wererat. The summoned giant rats are allies to the wererat. In combat, the giant rats share the wererat's Initiative count, but they take their turn immediately after the wererat.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Weretiger, Dire",
+  category:        "Creature",
+  type:            "Medium or Small Monstrosity (Lycanthrope)",
+  alignment:       "Neutral",
+  cr:              "6 (XP 2,300; PB +3)",
+  initiative:      "+2 (12)",
+  ac:              "12",
+  hp:              "170 (20d8 + 80)",
+  speed:           "30 ft., 40 ft. (tiger form only)",
+  str: "19 (+4) +4", dex: "15 (+2) +2", con: "18 (+4) +4",
+  int: "10 (+0) +0", wis: "15 (+2) +2", cha: "11 (+0) +0",
+  gear:            "Longbow",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +8, Stealth +5",
+  senses:          "Passive Perception 18",
+  languages:       "Common (can’t speak in tiger form)",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The weretiger makes three attacks, using Scratch or Longbow in any combination. It can replace one attack with a Bite attack.` },
+    { name: "Bite (Tiger or Hybrid Form Only)", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 15 (2d10 + 4) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 15. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Weretiger under the DM’s control and has 10 Hit Points. Success: The target is immune to this weretiger’s curse for 24 hours.` },
+    { name: "Scratch", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 13 (2d8 + 4) Slashing damage. If the target is a Large or smaller creature and the weretiger moved 20+ feet straight toward it immediately before the hit, the target has the Prone condition.` },
+    { name: "Longbow (Humanoid or Hybrid Form Only)", desc: `Ranged Attack Roll: +5, range 150/600 ft. Hit: 11 (2d8 + 2) Piercing damage.` }
+  ],
+  bonusActions:    [
+    { name: "Prowl (Tiger or Hybrid Form Only)", desc: `The weretiger moves up to its Speed without provoking Opportunity Attacks. At the end of this movement, the weretiger can take the Hide action.` },
+    { name: "Shape-Shift", desc: `The weretiger shape-shifts into a Large tiger-humanoid hybrid or a Large saber-toothed tiger, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+
+{
+  name:            "Werewolf, Dire",
+  category:        "Creature",
+  type:            "Medium or Small Monstrosity (Lycanthrope)",
+  alignment:       "Chaotic Evil",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+5 (15)",
+  ac:              "15",
+  hp:              "112 (15d8 + 45)",
+  speed:           "30 ft., 40 ft. (wolf form only)",
+  str: "18 (+4) +4", dex: "14 (+2) +2", con: "16 (+3) +3",
+  int: "10 (+0) +0", wis: "13 (+1) +1", cha: "10 (+0) +0",
+  gear:            "Longbow",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +4, Stealth +5",
+  senses:          "Passive Perception 14",
+  languages:       "Common (can’t speak in wolf form)",
+  traits:          [
+    { name: "Pack Tactics", desc: `The werewolf has Advantage on an attack roll against a creature if at least one of the werewolf’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The werewolf makes three attacks, using Scratch or Longbow in any combination. It can replace one attack with a Bite attack.` },
+    { name: "Bite (Wolf or Hybrid Form Only)", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 15 (2d10 + 4) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 14. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Werewolf under the DM’s control and has 10 Hit Points. Success: The target is immune to this werewolf’s curse for 24 hours.` },
+    { name: "Scratch", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 13 (2d8 + 4) Slashing damage.` },
+    { name: "Longbow (Humanoid or Hybrid Form Only)", desc: `Ranged Attack Roll: +5, range 150/600 ft. Hit: 11 (2d8 + 2) Piercing damage.` }
+  ],
+  bonusActions:    [
+    { name: "Shape-Shift", desc: `The werewolf shape-shifts into a Large wolf-humanoid hybrid or a Medium wolf, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Werewolf Berserker",
+  category:        "Creature",
+  type:            "Medium or Small Monstrosity (Lycanthrope)",
+  alignment:       "Chaotic Evil",
+  cr:              "4 (XP 1,100; PB +2)",
+  initiative:      "+4 (14)",
+  ac:              "15",
+  hp:              "97 (13d8 + 39)",
+  speed:           "30 ft., 40 ft. (wolf form only)",
+  str: "18 (+4) +4", dex: "14 (+2) +2", con: "16 (+3) +3",
+  int: "10 (+0) +0", wis: "11 (+0) +0", cha: "10 (+0) +0",
+  gear:            "Longbow",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +4, Stealth +4",
+  senses:          "Passive Perception 14",
+  languages:       "Common (can’t speak in wolf form)",
+  traits:          [
+    { name: "Bloodied Frenzy", desc: `While Bloodied, the werewolf has Advantage on attack rolls and saving throws.` },
+    { name: "Pack Tactics", desc: `The werewolf has Advantage on an attack roll against a creature if at least one of the werewolf’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The werewolf makes two attacks, using Scratch or Longbow in any combination. It can replace one attack with a Bite attack.` },
+    { name: "Bite (Wolf or Hybrid Form Only)", desc: `Melee Attack Roll: +6, reach 5 ft. Hit: 13 (2d8 + 4) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 13. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Werewolf under the DM’s control and has 10 Hit Points. Success: The target is immune to this werewolf’s curse for 24 hours.` },
+    { name: "Scratch", desc: `Melee Attack Roll: +6, reach 5 ft. Hit: 11 (2d6 + 4) Slashing damage.` },
+    { name: "Longbow (Humanoid or Hybrid Form Only)", desc: `Ranged Attack Roll: +4, range 150/600 ft. Hit: 11 (2d8 + 2) Piercing damage.` }
+  ],
+  bonusActions:    [
+    { name: "Shape-Shift", desc: `The werewolf shape-shifts into a Large wolf-humanoid hybrid or a Medium wolf, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+
+{
+  name:            "Werewolf Pack Lord",
+  category:        "Creature",
+  type:            "Medium or Small Monstrosity (Lycanthrope)",
+  alignment:       "Chaotic Evil",
+  cr:              "8 (XP 3,900; PB +3)",
+  initiative:      "+6 (16)",
+  ac:              "16",
+  hp:              "178 (21d8 + 84)",
+  speed:           "30 ft., 40 ft. (wolf form only)",
+  str: "20 (+5) +5", dex: "16 (+3) +3", con: "18 (+4) +4",
+  int: "10 (+0) +0", wis: "13 (+1) +1", cha: "12 (+1) +1",
+  gear:            "Longbow",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +7, Stealth +6",
+  senses:          "Passive Perception 17",
+  languages:       "Common (can’t speak in wolf form)",
+  traits:          [
+    { name: "Pack Tactics", desc: `The werewolf has Advantage on an attack roll against a creature if at least one of the werewolf’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.` },
+    { name: "Packmaster", desc: `Allies of the werewolf in a 20-foot Emanation originating from it that have less Hit Points than the werewolf have Advantage on attack rolls and saving throws. It can’t use this trait if it has the Frightened or Incapacitated condition.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The werewolf makes three attacks, using Scratch or Longbow in any combination. It can replace one attack with a Bite attack or a use of Packmaster's Strike.` },
+    { name: "Bite (Wolf or Hybrid Form Only)", desc: `Melee Attack Roll: +8, reach 5 ft. Hit: 16 (2d10 + 5) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 15. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Werewolf under the DM’s control and has 10 Hit Points. Success: The target is immune to this werewolf’s curse for 24 hours.` },
+    { name: "Scratch", desc: `Melee Attack Roll: +8, reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage.` },
+    { name: "Longbow (Humanoid or Hybrid Form Only)", desc: `Ranged Attack Roll: +6, range 150/600 ft. Hit: 12 (2d8 + 3) Piercing damage.` },
+    { name: "Packmaster's Strike", desc: `One ally that can see or hear the werewolf can take a Reaction to make one melee attack at a target the werewolf chooses. If the attack hits and the target isn't larger than the ally, the target has the Prone condition.` }
+  ],
+  bonusActions:    [
+    { name: "Shape-Shift", desc: `The werewolf shape-shifts into a Large wolf-humanoid hybrid or a Medium wolf, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
 {
   name:            "Manticore Alpha",
   category:        "Creature",

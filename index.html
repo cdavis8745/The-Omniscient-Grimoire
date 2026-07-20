@@ -17238,11 +17238,63 @@ const creatures = [
     { name: "Stench", desc: `Constitution Saving Throw: DC 10, any creature that starts its turn in a 5-foot Emanation originating from the claw. Failure: The target has the Poisoned condition until the start of its next turn. Success: The target is immune to this claw’s Stench for 24 hours.` }
   ],
   actions:         [
-    { name: "Slam", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 2 Necrotic damage. If the target is a creature that isn’t an Undead or elf, it is subjected to the following effect. Constitution Saving Throw: DC 10. Failure: The target has the Paralyzed condition until the end of its next turn.                                                                                                                          Swarm of Ghastly Claws Large Swarm of Tiny Undead, Neutral Evil AC 12 Initiative +2 (12) HP 97 (13d10 + 26) Speed 20 ft., Climb 20 ft. MOD SAVE MOD SAVE MOD SAVE Str 17 +3 +3 Dex 14 +2 +2 Con 14 +2 +2 Int 5 -3 -3 Wis 10 +0 +0 Cha 4 -3 -3 Resistances Bludgeoning, Piercing, Slashing Immunities Necrotic, Poison; Charmed, Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Prone, Incapacitated, Poisoned, Restrained, Stunned Senses Blindsight 30 ft.; Passive Perception 10 Languages Understands Common but can’t speak CR 5 (XP 1,800; PB +3)` }
+    { name: "Slam", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 2 Necrotic damage. If the target is a creature that isn’t an Undead or elf, it is subjected to the following effect. Constitution Saving Throw: DC 10. Failure: The target has the Paralyzed condition until the end of its next turn. ` }
   ],
   bonusActions:    [],
   reactions:       [],
   legendary:       []
+},
+
+{
+  name: "Swarm of Ghastly Claws",
+  category: "Creature",
+  type: "Large Swarm of Tiny Undead",
+  alignment: "Neutral Evil",
+  cr: "5 (XP 1,800; PB +3)",
+  initiative: "+2 (12)",
+  ac: "12",
+  hp: "97 (13d10 + 26)",
+  speed: "20 ft., Climb 20 ft.",
+
+  str: "17 (+3) +3",
+  dex: "14 (+2) +2",
+  con: "14 (+2) +2",
+  int: "5 (-3) -3",
+  wis: "10 (+0) +0",
+  cha: "4 (-3) -3",
+
+  gear: "",
+  saves: "",
+  resistances: "Bludgeoning, Piercing, Slashing",
+  immunities: "Necrotic, Poison; Charmed, Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Prone, Incapacitated, Poisoned, Restrained, Stunned",
+  vulnerabilities: "",
+  skills: "",
+  senses: "Blindsight 30 ft.; Passive Perception 10",
+  languages: "Understands Common but can't speak",
+
+  traits: [
+    {
+      name: "Stench",
+      desc: "**Constitution Saving Throw:** DC 13, any creature that starts its turn in a 5-foot Emanation originating from the swarm.\n**Failure:** The target has the Poisoned condition until the start of its next turn.\n**Success:** The target is immune to this swarm's Stench for 24 hours."
+    },
+    {
+      name: "Swarm",
+      desc: "The swarm can occupy another creature's space and vice versa, and it can move through any opening large enough for a Tiny creature. The swarm can't regain Hit Points or gain Temporary Hit Points."
+    }
+  ],
+
+  actions: [
+    {
+      name: "Swarm of Ghastly Hands",
+      desc: "**Melee Attack Roll:** +6, reach 5 ft.\n**Hit:** 25 (5d8 + 3) Necrotic damage, or 16 (3d8 + 3) Necrotic damage if the swarm is Bloodied.\n\nIf the target is a creature that isn't an Undead or an elf, it is subjected to the following effect:\n\n**Constitution Saving Throw:** DC 13.\n**Failure:** The target has the Paralyzed condition until the end of its next turn."
+    }
+  ],
+
+  bonusActions: [],
+
+  reactions: [],
+
+  legendary: []
 },
 
 {
@@ -18992,7 +19044,7 @@ const creatures = [
   resistances:     "",
   immunities:      "",
   vulnerabilities: "",
-  skills:          "Perception +7, Stealth +11, Survival +6",
+  skills:          "Perception +7, Stealth +11, Survival +7",
   senses:          "Darkvision 120 ft.; Passive Perception 17",
   languages:       "Elvish, Undercommon",
   traits:          [
@@ -23230,12 +23282,75 @@ const creatures = [
     { name: "Beak", desc: `Melee Attack Roll: +9, reach 10 ft. Hit: 11 (1d10 + 6) Piercing damage.` }
   ],
   bonusActions:    [
-    { name: "Primal Screech (1/Day)", desc: `Wisdom Saving Throw: DC 15, each enemy that can hear the hook horror in a 60-foot Emanation originating from the hook horror. Failure: The target has the Frightened condition until the end of the hook horror's next turn. Failure or Success: Up to three allies that can hear the hook horror can take a Reaction to move up to half its Speed or make one melee attack.                                                                                                                          Cryohydra Huge Monstrosity, Unaligned AC 15 Initiative +5 (15) HP 195 (17d12 + 85) Speed 30 ft., Swim 40 ft. MOD SAVE MOD SAVE MOD SAVE Str 20 +5 +5 Dex 12 +1 +1 Con 20 +5 +5 Int 2 -4 -4 Wis 10 +0 +0 Cha 7 -2 -2 Skills Perception +8 Immunities Cold; Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious Senses Darkvision 60 ft.; Passive Perception 18 Languages None CR 9 (XP 5,000; PB +4)` }
+    { name: "Primal Screech (1/Day)", desc: `Wisdom Saving Throw: DC 15, each enemy that can hear the hook horror in a 60-foot Emanation originating from the hook horror. Failure: The target has the Frightened condition until the end of the hook horror's next turn. Failure or Success: Up to three allies that can hear the hook horror can take a Reaction to move up to half its Speed or make one melee attack` }
   ],
   reactions:       [],
   legendary:       []
 },
 
+{
+  name: "Cryohydra",
+  category: "Creature",
+  type: "Huge Monstrosity",
+  alignment: "Unaligned",
+  cr: "9 (XP 5,000; PB +4)",
+  initiative: "+5 (15)",
+  ac: "15",
+  hp: "195 (17d12 + 85)",
+  speed: "30 ft., Swim 40 ft.",
+
+  str: "20 (+5) +5",
+  dex: "12 (+1) +1",
+  con: "20 (+5) +5",
+  int: "2 (-4) -4",
+  wis: "10 (+0) +0",
+  cha: "7 (-2) -2",
+
+  gear: "",
+  saves: "",
+  resistances: "",
+  immunities: "Cold; Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious",
+  vulnerabilities: "",
+  skills: "Perception +8",
+  senses: "Darkvision 60 ft.; Passive Perception 18",
+  languages: "None",
+
+  traits: [
+    {
+      name: "Hold Breath",
+      desc: "The hydra can hold its breath for 1 hour."
+    },
+    {
+      name: "Multiple Heads",
+      desc: "The hydra has five heads. Whenever the hydra takes 25 damage or more on a single turn, one of its heads dies. The hydra dies if all its heads are dead. At the end of each of its turns when it has at least one living head, the hydra grows two heads for each head that died since its last turn, unless it has taken Fire damage since its last turn. The hydra regains 20 Hit Points whenever it grows new heads."
+    },
+    {
+      name: "Reactive Heads",
+      desc: "For each head the hydra has beyond one, it gains an extra Reaction that can be used only to make Opportunity Attacks."
+    }
+  ],
+
+  actions: [
+    {
+      name: "Multiattack",
+      desc: "The hydra makes as many Bite attacks as it has heads. It can replace one of those attacks with Cold Breath."
+    },
+    {
+      name: "Bite",
+      desc: "**Melee Attack Roll:** +9, reach 10 ft.\n**Hit:** 10 (1d10 + 5) Piercing damage plus 3 (1d6) Cold damage."
+    },
+    {
+      name: "Cold Breath",
+      desc: "**Constitution Saving Throw:** DC 17, each creature in a 15-foot Cone.\n**Failure:** 17 (5d6) Cold damage.\n**Success:** Half damage."
+    }
+  ],
+
+  bonusActions: [],
+
+  reactions: [],
+
+  legendary: []
+},
 {
   name:            "Fen Hydra",
   category:        "Creature",
@@ -24952,7 +25067,7 @@ const creatures = [
   resistances:     "",
   immunities:      "",
   vulnerabilities: "",
-  skills:          "Perception +9, Survival +10",
+  skills:          "Perception +9, Survival +9",
   senses:          "Darkvision 60 ft.; Passive Perception 19",
   languages:       "Abyssal",
   traits:          [
@@ -28744,10 +28859,74 @@ const creatures = [
     { name: "Life Drain", desc: `Melee Attack Roll: +6, reach 5 ft. Hit: 14 (4d6) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.` }
   ],
   bonusActions:    [
-    { name: "Cunning Action", desc: `The specter takes the Dash, Disengage, or Hide action.                                                                                                                          Criosphinx Large Monstrosity, Chaotic Neutral AC 15 Initiative +4 (14) HP 133 (14d10 + 56) Speed 40 ft., Fly 60 ft. MOD SAVE MOD SAVE MOD SAVE Str 19 +4 +4 Dex 12 +1 +1 Con 18 +4 +4 Int 8 -1 -1 Wis 12 +1 +1 Cha 14 +2 +2 Skills Intimidation +8, Perception +7 Resistances Necrotic, Radiant Immunities Psychic; Charmed, Frightened Senses Truesight 60 ft.; Passive Perception 17 Languages Common CR 7 (XP 2,900; PB +3)` }
+    { name: "Cunning Action", desc: `The specter takes the Dash, Disengage, or Hide action` }
   ],
   reactions:       [],
   legendary:       []
+},
+
+{
+  name: "Criosphinx",
+  category: "Creature",
+  type: "Large Monstrosity",
+  alignment: "Chaotic Neutral",
+  cr: "7 (XP 2,900; PB +3)",
+  initiative: "+4 (14)",
+  ac: "15",
+  hp: "133 (14d10 + 56)",
+  speed: "40 ft., Fly 60 ft.",
+
+  str: "19 (+4) +4",
+  dex: "12 (+1) +1",
+  con: "18 (+4) +4",
+  int: "8 (-1) -1",
+  wis: "12 (+1) +1",
+  cha: "14 (+2) +2",
+
+  gear: "",
+  saves: "",
+  resistances: "Necrotic, Radiant",
+  immunities: "Psychic; Charmed, Frightened",
+  vulnerabilities: "",
+  skills: "Intimidation +8, Perception +7",
+  senses: "Truesight 60 ft.; Passive Perception 17",
+  languages: "Common",
+
+  traits: [
+    {
+      name: "Inscrutable",
+      desc: "No magic can observe the sphinx remotely or detect its thoughts without its permission. Wisdom (Insight) checks made to ascertain its intentions or sincerity are made with Disadvantage."
+    },
+    {
+      name: "Magic Resistance",
+      desc: "The sphinx has Advantage on saving throws against spells and other magical effects."
+    }
+  ],
+
+  actions: [
+    {
+      name: "Multiattack",
+      desc: "The sphinx makes one Ram attack and two Claw attacks."
+    },
+    {
+      name: "Ram",
+      desc: "Melee Attack Roll: +7, reach 5 ft. Hit: 10 (1d12 + 4) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Prone condition."
+    },
+    {
+      name: "Claw",
+      desc: "Melee Attack Roll: +7, reach 5 ft. Hit: 11 (2d6 + 4) Slashing damage."
+    }
+  ],
+
+  bonusActions: [
+    {
+      name: "Mark of Enmity (Recharge 5–6)",
+      desc: "The sphinx magically marks one creature it can see within 30 feet of it. For 1 minute, the sphinx has Advantage on attack rolls made against it and deals an extra 9 (2d8) Force damage to the creature whenever it hits it with an attack roll."
+    }
+  ],
+
+  reactions: [],
+  legendary: []
 },
 
 {
@@ -28878,12 +29057,58 @@ const creatures = [
     { name: "Proboscis", desc: `Melee Attack Roll: +6, reach 5 ft. Hit: 7 (1d6 + 4) Piercing damage, and the stirge attaches to the target. While attached, the stirge can’t make Proboscis attacks, and the target takes 5 (2d4) Necrotic damage at the start of each of the stirge’s turns. The stirge can detach itself by spending 5 feet of its movement. The target or a creature within 5 feet of it can detach the stirge as an action.` }
   ],
   bonusActions:    [
-    { name: "Shadow Stealth", desc: `While in Dim Light or Darkness, the stirge takes the Hide action.                                                                                                                          Swarm of Stirges Large Swarm of Tiny Monstrosities, Unaligned AC 13 Initiative +3 (13) HP 66 (12d10) Speed 10 ft., Fly 40 ft. MOD SAVE MOD SAVE MOD SAVE Str 8 -1 -1 Dex 16 +3 +3 Con 11 +0 +0 Int 3 -4 -4 Wis 8 -1 -1 Cha 6 -2 -2 Resistances Bludgeoning, Piercing, Slashing Immunities Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned Senses Darkvision 60 ft.; Passive Perception 9 Languages None CR 3 (XP 700; PB +2)` }
+    { name: "Shadow Stealth", desc: `While in Dim Light or Darkness, the stirge takes the Hide action.` }
   ],
   reactions:       [],
   legendary:       []
 },
+{
+  name: "Swarm of Stirges",
+  category: "Creature",
+  type: "Large Swarm of Tiny Monstrosities",
+  alignment: "Unaligned",
 
+  ac: "13",
+  initiative: "+3 (13)",
+  hp: "66 (12d10)",
+  speed: "10 ft., Fly 40 ft.",
+
+  str: "8 (-1) -1",
+  dex: "16 (+3) +3",
+  con: "11 (+0) +0",
+  int: "3 (-4) -4",
+  wis: "8 (-1) -1",
+  cha: "6 (-2) -2",
+
+  gear: "",
+  saves: "",
+  skills: "",
+  resistances: "Bludgeoning, Piercing, Slashing",
+  immunities: "Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned",
+  vulnerabilities: "",
+  senses: "Darkvision 60 ft.; Passive Perception 9",
+  languages: "None",
+
+  cr: "3 (XP 700; PB +2)",
+
+  traits: [
+    {
+      name: "Swarm",
+      desc: "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny stirge. The swarm can't regain Hit Points or gain Temporary Hit Points."
+    }
+  ],
+
+  actions: [
+    {
+      name: "Proboscis",
+      desc: "Melee Attack Roll: +5, reach 5 ft. Hit: 24 (6d6 + 3) Piercing damage, and the swarm attaches to the target. While attached, the swarm can't make Proboscis attacks, and the target takes 15 (6d4) Necrotic damage at the start of each of the swarm's turns. The swarm can detach itself by spending 5 feet of its movement. The target or a creature within 5 feet of it can detach the swarm as an action with a successful DC 13 Strength check."
+    }
+  ],
+
+  bonusActions: [],
+  reactions: [],
+  legendary: []
+},
 {
   name:            "Succubus Dark Whisperer",
   category:        "Creature",
@@ -29575,7 +29800,7 @@ const creatures = [
   ],
   legendary:       [
     { name: "Charging Horn", desc: `The unicorn moves up to half its Speed without provoking Opportunity Attacks, and it makes one Necrotic Horn attack.` },
-    { name: "Dreadful Presence", desc: `Wisdom Saving Throw: DC 14, each creature in a 30-foot Emanation originating from the unicorn. Failure: The creature has the Frightened condition until the end of the unicorn's next turn. Success: The target is immune to this unicorn's Dreadful Presence for 24 hours.                                                                                                                          Blackguard Vampire Lord Medium or Small Undead, Lawful Evil AC 18 Initiative +16 (26) HP 266 (28d8 + 140) Speed 40 ft., Climb 40 ft. MOD SAVE MOD SAVE MOD SAVE Str 20 +5 +5 Dex 18 +4 +10 Con 20 +5 +11 Int 15 +2 +2 Wis 17 +3 +9 Cha 20 +5 +11 Skills Insight +9, Intimidation +17, Perception +9, Stealth +10 Gear Greatsword, Plate Armor Resistances Necrotic Senses Darkvision 120 ft.; Passive Perception 19 Languages Common plus two other languages CR 19 (XP 22,000, or 25,000 in lair; PB +6)` }
+    { name: "Dreadful Presence", desc: `Wisdom Saving Throw: DC 14, each creature in a 30-foot Emanation originating from the unicorn. Failure: The creature has the Frightened condition until the end of the unicorn's next turn. Success: The target is immune to this unicorn's Dreadful Presence for 24 hours` }
   ]
 },
 {
@@ -31445,15 +31670,1091 @@ const creatures = [
     { name: "Quickened Spell (2/Day)", desc: `The guard uses Spellcasting.` }
   ],
   reactions:       [
-    { name: "Parry", desc: `Trigger: The spider is hit by a melee attack roll. Response: The spider adds 3 to its AC against that attack, possibly causing it to miss.                                                                                                                          Arcane Guard Medium or Small Humanoid, Any Alignment AC 16 Initiative +2 (12) HP 78 (12d8 + 24) Speed 30 ft. MOD SAVE MOD SAVE MOD SAVE Str 17 +3 +3 Dex 14 +2 +2 Con 14 +2 +4 Int 10 +0 +0 Wis 13 +1 +3 Cha 17 +3 +3 Skills Arcana +2, Perception +3 Gear Longsword, Scale Mail Senses Passive Perception 13 Languages Common plus one other language CR 4 (XP 1,100; PB +2)` }
+    { name: "Parry", desc: `Trigger: The spider is hit by a melee attack roll. Response: The spider adds 3 to its AC against that attack, possibly causing it to miss.` }
   ],
   legendary:       [
     { name: "Dreadful Bolt", desc: `The dread lord makes one Dreadful Bolt attack.` },
     { name: "Dreadful Charge", desc: `The dread lord moves up to half its Speed, and it makes one Dreadful Morningstar attack.` },
-    { name: "Dreadful Magic", desc: `The dread lord uses Spellcasting to cast Command (level 3 version), Dispel Magic, Fear, and Hold Person (level 3 version). The dread lord can’t take this action again until the start of its next turn.                                                                                                                          Divine Trickster Medium or Small Humanoid (Cleric), Any Non-Lawful Alignment AC 15 Initiative +5 (15) HP 117 (18d8 + 36) Speed 30 ft. MOD SAVE MOD SAVE MOD SAVE Str 14 +2 +2 Dex 14 +2 +2 Con 14 +2 +2 Int 13 +1 +1 Wis 19 +4 +4 Cha 17 +3 +3 Skills Deception +9, Perception +7, Stealth +5 Gear Chain Shirt, Mace Senses Passive Perception 17 Languages Common plus one other language CR 5 (XP 1,800; PB +3)` }
+    { name: "Dreadful Magic", desc: `The dread lord uses Spellcasting to cast Command (level 3 version), Dispel Magic, Fear, and Hold Person (level 3 version). The dread lord can’t take this action again until the start of its next turn.` }
   ]
 },
+{
+  name: "Arcane Guard",
+  category: "Creature",
+  type: "Medium or Small Humanoid",
+  alignment: "Any Alignment",
 
+  ac: "16",
+  initiative: "+2 (12)",
+  hp: "78 (12d8 + 24)",
+  speed: "30 ft.",
+
+  str: "17 (+3) +3",
+  dex: "14 (+2) +2",
+  con: "14 (+2) +4",
+  int: "10 (+0) +0",
+  wis: "13 (+1) +3",
+  cha: "17 (+3) +3",
+
+  gear: "Longsword, Scale Mail",
+  saves: "",
+  skills: "Arcana +2, Perception +3",
+  resistances: "",
+  immunities: "",
+  vulnerabilities: "",
+  senses: "Passive Perception 13",
+  languages: "Common plus one other language",
+
+  cr: "4 (XP 1,100; PB +2)",
+
+  traits: [],
+
+  actions: [
+    {
+      name: "Multiattack",
+      desc: "The guard makes two attacks, using Longsword or Sorcerous Burst in any combination."
+    },
+    {
+      name: "Longsword",
+      desc: "Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage plus 4 (1d8) Force damage."
+    },
+    {
+      name: "Sorcerous Burst",
+      desc: "Ranged Attack Roll: +5, range 120 ft. Hit: 9 (2d8) Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder damage (guard's choice)."
+    },
+    {
+      name: "Spellcasting",
+      desc: "The guard casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 13).\n\n**At Will:** Mage Hand, Minor Illusion\n\n**1/Day Each:** Detect Thoughts, Haste, Lightning Bolt, Mind Spike, Mirror Image, Ray of Enfeeblement, Thunderwave."
+    }
+  ],
+
+  bonusActions: [
+    {
+      name: "Quickened Spell (2/Day)",
+      desc: "The guard uses Spellcasting."
+    }
+  ],
+
+  reactions: [
+    {
+      name: "Protective Magic (2/Day)",
+      desc: "The guard casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+    }
+  ],
+
+  legendary: []
+},
+{
+  name:            "Arcane Knight",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid",
+  alignment:       "Any Alignment",
+  cr:              "8 (XP 3,900; PB +3)",
+  initiative:      "+3 (13)",
+  ac:              "18",
+  hp:              "135 (18d8 + 54)",
+  speed:           "30 ft.",
+  str: "19 (+4) +4", dex: "10 (+0) +0", con: "16 (+3) +6",
+  int: "10 (+0) +0", wis: "13 (+1) +4", cha: "18 (+4) +4",
+  gear:            "Greatsword, Plate Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "Frightened",
+  vulnerabilities: "",
+  skills:          "Arcana +3, Perception +4",
+  senses:          "Passive Perception 14",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The knight makes two attacks, using Greatsword or Sorcerous Burst in any combination.` },
+    { name: "Greatsword", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 10 (2d6 + 3) Slashing damage plus 9 (2d8) Force damage.` },
+    { name: "Sorcerous Burst", desc: `Ranged Attack Roll: +7, range 120 ft. Hit: 13 (3d8) Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder damage (knight's choice).` },
+    { name: "Spellcasting", desc: `The knight casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 15):\n\nAt Will: Mage Hand, Minor Illusion\n2/Day Each: Mirror Image, Ray of Enfeeblement, Thunderwave\n1/Day Each: Detect Thoughts, Dispel Magic, Haste, Lightning Bolt, Mind Spike` }
+  ],
+  bonusActions:    [
+    { name: "Quickened Spell (3/Day)", desc: `The knight uses Spellcasting.` }
+  ],
+  reactions:       [
+    { name: "Parry", desc: `Trigger: The knight is hit by a melee attack roll while holding a weapon. Response: The knight adds 3 to its AC against that attack, possibly causing it to miss.` },
+    { name: "Protective Magic (2/Day)", desc: `The knight casts Counterspell or Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.` }
+  ],
+  legendary:       []
+},
+{
+  name:            "Blight Druid",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Druid)",
+  alignment:       "Any Non-Good Alignment",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+2 (12)",
+  ac:              "14",
+  hp:              "97 (13d8 + 39)",
+  speed:           "30 ft.",
+  str: "14 (+2) +2", dex: "14 (+2) +2", con: "16 (+3) +3",
+  int: "10 (+0) +0", wis: "17 (+3) +6", cha: "8 (-1) -1",
+  gear:            "Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Medicine +6, Nature +3, Perception +6",
+  senses:          "Passive Perception 16",
+  languages:       "Common, Druidic, Sylvan",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The druid makes two attacks, using Blight Scythe or Blight Bolt in any combination. It can replace one attack with a use of Spellcasting.` },
+    { name: "Blight Scythe", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d10 + 2) Slashing damage plus 14 (4d6) Necrotic damage, and the target has the Poisoned condition until the end of the druid's next turn.` },
+    { name: "Blight Bolt", desc: `Ranged Attack Roll: +6, range 120 ft. Hit: 10 (3d6) Necrotic damage plus 10 (3d6) Poison damage.` },
+    { name: "Spellcasting", desc: `The druid casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 14):\n\nAt Will: Druidcraft, Speak with Animals\n1/Day Each: Blight, Cloudkill, Contagion, Entangle, Pass without Trace, Spike Growth, Stinking Cloud` },
+    { name: "Blight Wave (Recharge 5–6)", desc: `Constitution Saving Throw: DC 14, each creature in a 20-foot Emanation originating from the druid. Failure: 14 (4d6) Necrotic damage plus 14 (4d6) Poison damage, and the target has the Poisoned condition until the end of the druid's next turn. Success: Half damage only.` }
+  ],
+  bonusActions:    [],
+  reactions:       [],
+  legendary:       []
+},
+
+{
+  name:            "Bodyguard",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid",
+  alignment:       "Any Alignment",
+  cr:              "1 (XP 200; PB +2)",
+  initiative:      "+2 (12)",
+  ac:              "18",
+  hp:              "26 (4d8 + 8)",
+  speed:           "30 ft.",
+  str: "16 (+3) +3", dex: "14 (+2) +2", con: "15 (+2) +2",
+  int: "10 (+0) +0", wis: "14 (+2) +2", cha: "10 (+0) +0",
+  gear:            "Longsword, Scale Mail, Shield",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +6",
+  senses:          "Passive Perception 16",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Longsword", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage.` }
+  ],
+  bonusActions:    [],
+  reactions:       [
+    { name: "Protection", desc: `Trigger: An attacker the bodyguard can see makes an attack roll against an ally within 5 feet of the bodyguard. Response: The bodyguard imposes Disadvantage on the attack roll.` }
+  ],
+  legendary:       []
+},
+{
+  name:            "Bodyguard, Elite",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid",
+  alignment:       "Any Alignment",
+  cr:              "3 (XP 700; PB +2)",
+  initiative:      "+2 (12)",
+  ac:              "19",
+  hp:              "75 (10d8 + 30)",
+  speed:           "30 ft.",
+  str: "18 (+4) +4", dex: "14 (+2) +2", con: "16 (+3) +5",
+  int: "10 (+0) +0", wis: "16 (+3) +5", cha: "10 (+0) +0",
+  gear:            "Half Plate Armor, Longsword, Shield",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +7",
+  senses:          "Passive Perception 17",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The bodyguard makes two Longsword attacks.` },
+    { name: "Longsword", desc: `Melee Attack Roll: +6, reach 5 ft. Hit: 8 (1d8 + 4) Slashing damage.` }
+  ],
+  bonusActions:    [
+    { name: "Lightfooted", desc: `The bodyguard takes the Dash or Disengage action.` }
+  ],
+  reactions:       [
+    { name: "Self-Sacrifice", desc: `Trigger: An ally the bodyguard can see is hit by an attack. Response: The bodyguard and that ally swap places, and the bodyguard becomes the target of the attack instead.` }
+  ],
+  legendary:       []
+},
+{
+  name:            "Bounty Hunter",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Ranger)",
+  alignment:       "Any Alignment",
+  cr:              "2 (XP 450; PB +2)",
+  initiative:      "+3 (13)",
+  ac:              "15",
+  hp:              "52 (8d8 + 16)",
+  speed:           "30 ft.",
+  str: "10 (+0) +0", dex: "16 (+3) +3", con: "14 (+2) +2",
+  int: "12 (+1) +1", wis: "15 (+2) +2", cha: "10 (+0) +0",
+  gear:            "Light Crossbow, Shortsword, Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +6, Stealth +5, Survival +6",
+  senses:          "Passive Perception 16",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Nonlethal Strike", desc: `When the bounty hunter reduces a creature to 0 Hit Points with an attack, it can instead choose to reduce the creature to 1 Hit Point and give it the Unconscious condition. It then starts a Short Rest, at the end of which that condition ends on it. The condition ends early if the creature regains any Hit Points or if someone takes an action to administer first aid to it, making a successful DC 10 Wisdom (Medicine) check.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The bounty hunter makes two attacks, using Shortsword or Light Crossbow in any combination.` },
+    { name: "Shortsword", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage, and the target's Speed is reduced by half until the start of the bounty hunter's next turn.` },
+    { name: "Light Crossbow", desc: `Ranged Attack Roll: +5, range 80/320 ft. Hit: 7 (1d8 + 3) Piercing damage, and the target's Speed is reduced by half until the start of the bounty hunter's next turn.` }
+  ],
+  bonusActions:    [
+    { name: "Hunter's Mark (2/Day)", desc: `The bounty hunter casts Hunter's Mark, requiring no spell components and using Wisdom as the spellcasting ability.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Bounty Hunter, Elite",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Ranger)",
+  alignment:       "Any Alignment",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+4 (14)",
+  ac:              "16",
+  hp:              "105 (14d8 + 42)",
+  speed:           "30 ft.",
+  str: "12 (+1) +1", dex: "19 (+4) +4", con: "16 (+3) +3",
+  int: "13 (+1) +1", wis: "16 (+3) +3", cha: "12 (+1) +1",
+  gear:            "Light Crossbow, Shortsword, Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Insight +6, Perception +9, Stealth +7, Survival +9",
+  senses:          "Passive Perception 19",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Nonlethal Strike", desc: `When the bounty hunter reduces a creature to 0 Hit Points with an attack, it can instead choose to reduce the creature to 1 Hit Point and give it the Unconscious condition. It then starts a Short Rest, at the end of which that condition ends on it. The condition ends early if the creature regains any Hit Points or if someone takes an action to administer first aid to it, making a successful DC 10 Wisdom (Medicine) check.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The bounty hunter makes three attacks, using Shortsword or Light Crossbow in any combination.` },
+    { name: "Shortsword", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 7 (1d6 + 4) Piercing damage plus 7 (2d6) Poison damage, and the target's Speed is reduced by half until the start of the bounty hunter's next turn.` },
+    { name: "Light Crossbow", desc: `Ranged Attack Roll: +7, range 80/320 ft. Hit: 8 (1d8 + 4) Piercing damage plus 7 (2d6) Poison damage, and the target's Speed is reduced by half until the start of the bounty hunter's next turn.` }
+  ],
+  bonusActions:    [
+    { name: "Hunter's Mark (3/Day)", desc: `The bounty hunter casts Hunter's Mark, requiring no spell components and using Wisdom as the spellcasting ability.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Captain",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid",
+  alignment:       "Any Alignment",
+  cr:              "2 (XP 450; PB +2)",
+  initiative:      "+2 (12)",
+  ac:              "18",
+  hp:              "52 (7d8 + 21)",
+  speed:           "30 ft.",
+  str: "16 (+3) +3", dex: "14 (+2) +2", con: "16 (+3) +3",
+  int: "10 (+0) +0", wis: "13 (+1) +1", cha: "12 (+1) +1",
+  gear:            "Light Crossbow, Longsword, Scale Mail, Shield",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +3",
+  senses:          "Passive Perception 13",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The captain makes two attacks, using Longsword or Light Crossbow in any combination. It can replace one attack with a use of Commander's Strike or Maneuver Allies, if available.` },
+    { name: "Longsword", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage.` },
+    { name: "Light Crossbow", desc: `Ranged Attack Roll: +4, range 80/320 ft. Hit: 6 (1d8 + 2) Piercing damage.` },
+    { name: "Commander's Strike", desc: `One ally that can see or hear the captain can take a Reaction to make one attack with a weapon or an Unarmed Strike at a target the captain chooses, adding 4 (1d8) to the attack's damage roll on a hit.` },
+    { name: "Maneuver Allies (Recharge 5–6)", desc: `Each ally within 30 feet of the captain can take a Reaction to move up to half its Speed without provoking Opportunity Attacks.` }
+  ],
+  bonusActions:    [],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Dark Whisperer",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Bard)",
+  alignment:       "Any Non-Good Alignment",
+  cr:              "4 (XP 1,100; PB +2)",
+  initiative:      "+3 (13)",
+  ac:              "15",
+  hp:              "78 (12d8 + 24)",
+  speed:           "30 ft.",
+  str: "10 (+0) +0", dex: "16 (+3) +3", con: "14 (+2) +2",
+  int: "10 (+0) +0", wis: "13 (+1) +3", cha: "17 (+3) +3",
+  gear:            "Rapier, Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Deception +7, Persuasion +7, Stealth +5",
+  senses:          "Passive Perception 11",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The whisperer makes two attacks, using Rapier or Befuddling Bolt in any combination.` },
+    { name: "Rapier", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage plus 7 (2d6) Poison damage, and the whisperer has Advantage on the next attack roll it makes against the target before the end of this turn.` },
+    { name: "Befuddling Bolt", desc: `Ranged Attack Roll: +5, range 90 ft. Hit: 10 (2d6 + 3) Psychic damage, and the target has Disadvantage on Intelligence, Wisdom, and Charisma saving throws until the end of the whisperer's next turn.` },
+    { name: "Spellcasting", desc: `The whisperer casts one of the following spells, using Charisma as the spellcasting ability (spell save DC 13):\n\nAt Will: Friends, Mage Hand, Minor Illusion\n1/Day Each: Charm Person, Confusion, Dissonant Whispers, Greater Invisibility, Major Image, Tasha's Hideous Laughter` }
+  ],
+  bonusActions:    [
+    { name: "Dark Whispers", desc: `Wisdom Saving Throw: DC 13, a creature the whisperer can see within 30 feet and can hear the whisperer. Failure: The target takes 10 (3d6) Psychic damage and has the Charmed condition until the start of the whisperer's next turn. The Charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that the whisperer mentally chooses. The target can act normally on its turn if the whisperer chooses no creature or if no creature is within its reach. Success: The target is immune to this whisperer's Dark Whispers for 24 hours.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Death Priest",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Cleric)",
+  alignment:       "Any Non-Good Alignment",
+  cr:              "8 (XP 3,900; PB +3)",
+  initiative:      "+2 (12)",
+  ac:              "17",
+  hp:              "127 (17d8 + 51)",
+  speed:           "30 ft.",
+  str: "11 (+0) +0", dex: "14 (+2) +2", con: "16 (+3) +3",
+  int: "12 (+1) +1", wis: "19 (+4) +7", cha: "10 (+0) +0",
+  gear:            "Half Plate Armor, Holy Symbol",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Arcana +4, Religion +7",
+  senses:          "Passive Perception 14",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The priest makes two Necrotic Burst attacks. It can replace one attack with a use of Spellcasting to cast Bestow Curse, Ray of Enfeeblement, or Vampiric Touch.` },
+    { name: "Necrotic Burst", desc: `Melee or Ranged Attack Roll: +7, reach 5 ft. or range 120 ft. Hit: 22 (4d8 + 4) Necrotic damage and the target can't regain Hit Points until the end of its next turn.` },
+    { name: "Pillar of Death (Recharge 5–6)", desc: `Constitution Saving Throw: DC 15, each creature in a 10-foot-radius, 40-foot-high Cylinder centered on a point the priest can see within 60 feet. Failure: 36 (8d8) Necrotic damage and the target can't regain Hit Points until the end of its next turn. Success: Half damage only.` },
+    { name: "Spellcasting", desc: `The priest casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 15):\n\nAt Will: Speak with Dead, Thaumaturgy\n2/Day Each: Bestow Curse, Cure Wounds, Ray of Enfeeblement\n1/Day Each: Animate Dead (as an action), Contagion, Create Undead, Dirge, Feign Death, Finger of Death, Vampiric Touch` }
+  ],
+  bonusActions:    [],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Dread Lord of Bane",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Cleric)",
+  alignment:       "Lawful Evil",
+  cr:              "13 (XP 10,000; PB +5)",
+  initiative:      "+5 (15)",
+  ac:              "18",
+  hp:              "187 (25d8 + 75)",
+  speed:           "30 ft.",
+  str: "18 (+4) +4", dex: "10 (+0) +0", con: "16 (+3) +8",
+  int: "12 (+1) +1", wis: "20 (+5) +10", cha: "17 (+3) +8",
+  gear:            "Plate Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "Frightened",
+  vulnerabilities: "",
+  skills:          "Intimidation +8, Perception +10, Religion +11",
+  senses:          "Passive Perception 20",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Aura of Dread", desc: `Creatures in a 30-foot Emanation originating from the dread lord have their Speeds halved while in the Emanation. The dread lord can designate creatures to be unaffected by the aura. Creatures immune to the Frightened condition are unaffected.` },
+    { name: "Legendary Resistance (3/Day)", desc: `If the dread lord fails a saving throw, it can choose to succeed instead.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The dread lord makes two attacks, using Dreadful Morningstar or Dreadful Bolt in any combination.` },
+    { name: "Dreadful Morningstar", desc: `Melee Attack Roll: +9 (with Advantage if the target has the Frightened condition), reach 5 ft. Hit: 13 (2d8 + 4) Piercing damage plus 9 (2d8) Psychic damage, and the target has the Frightened condition until the end of the dread lord's next turn.` },
+    { name: "Dreadful Bolt", desc: `Ranged Attack Roll: +10 (with Advantage if the target has the Frightened condition), range 120 ft. Hit: 13 (3d8) Psychic damage, and the target has the Frightened condition until the end of the dread lord's next turn.` },
+    { name: "Spellcasting", desc: `The dread lord casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 18):\n\nAt Will: Command (level 3 version), Thaumaturgy\n2/Day Each: Fear, Hold Person (level 3 version)\n1/Day Each: Dirge, Dispel Evil and Good, Dispel Magic` }
+  ],
+  bonusActions:    [
+    { name: "Dreadful Word (1/Day)", desc: `The dread lord casts Divine Word, using the same spellcasting ability as Spellcasting.` }
+  ],
+  reactions:       [],
+  legendary:       [
+    { name: "Legendary Action Uses", desc: `3. Immediately after another creature's turn, the dread lord can expend a use to take one of the following actions. The dread lord regains all expended uses at the start of each of its turns.` },
+    { name: "Dreadful Bolt", desc: `The dread lord makes one Dreadful Bolt attack.` },
+    { name: "Dreadful Charge", desc: `The dread lord moves up to half its Speed, and it makes one Dreadful Morningstar attack.` },
+    { name: "Dreadful Magic", desc: `The dread lord uses Spellcasting to cast Command (level 3 version), Dispel Magic, Fear, and Hold Person (level 3 version). The dread lord can't take this action again until the start of its next turn.` }
+  ]
+},
+{
+  name:            "Divine Trickster",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Cleric)",
+  alignment:       "Any Non-Lawful Alignment",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+5 (15)",
+  ac:              "15",
+  hp:              "117 (18d8 + 36)",
+  speed:           "30 ft.",
+  str: "14 (+2) +2", dex: "14 (+2) +2", con: "14 (+2) +2",
+  int: "13 (+1) +1", wis: "19 (+4) +4", cha: "17 (+3) +3",
+  gear:            "Chain Shirt, Mace",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Deception +9, Perception +7, Stealth +5",
+  senses:          "Passive Perception 17",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The divine trickster makes two attacks, using Mace or Befuddling Bolt in any combination.` },
+    { name: "Mace", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d6 + 2) Bludgeoning damage plus 13 (3d8) Psychic damage, and the target can't take Reactions until the start of the divine trickster's next turn.` },
+    { name: "Befuddling Bolt", desc: `Ranged Attack Roll: +7, range 90 ft. Hit: 14 (3d6 + 4) Psychic damage, and the target has Disadvantage on Intelligence, Wisdom, and Charisma saving throws until the end of the divine trickster's next turn.` },
+    { name: "Spellcasting", desc: `The divine trickster casts one of the following spells, using Charisma as the spellcasting ability (spell save DC 14):\n\nAt Will: Disguise Self, Minor Illusion, Thaumaturgy\n2/Day Each: Charm Person, Invisibility, Mirror Image\n1/Day Each: Confusion, Dimension Door, Dominate Person` }
+  ],
+  bonusActions:    [
+    { name: "Invoke Duplicity (2/Day)", desc: `The divine trickster casts Project Image, using the same spellcasting ability as Spellcasting.` }
+  ],
+  reactions:       [
+    { name: "Misty Retreat (3/Day)", desc: `Trigger: The divine trickster takes damage. Response: The divine trickster casts Misty Step.` }
+  ],
+  legendary:       []
+},
+{
+  name:            "Dreadmaster",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Paladin)",
+  alignment:       "Lawful Evil",
+  cr:              "10 (XP 5,900; PB +4)",
+  initiative:      "+4 (14)",
+  ac:              "20",
+  hp:              "172 (23d8 + 69)",
+  speed:           "30 ft.",
+  str: "20 (+5) +5", dex: "10 (+0) +0", con: "16 (+3) +7",
+  int: "12 (+1) +1", wis: "12 (+1) +5", cha: "18 (+4) +8",
+  gear:            "Plate Armor, Shield",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Insight +8, Intimidation +8, Perception +11",
+  senses:          "Passive Perception 21",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Aura of Dread", desc: `Creatures in a 30-foot Emanation originating from the dreadmaster have their Speeds halved while in the Emanation. The dreadmaster can designate creatures to be unaffected by the aura. Creatures immune to the Frightened condition are unaffected.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The dreadmaster makes three attacks, using Dire Longsword or Dire Bolt in any combination. It can replace one attack with a use of Commander's Strike or Spellcasting to cast Bane, Command, or Hold Person.` },
+    { name: "Dire Longsword", desc: `Melee Attack Roll: +9, reach 5 ft. Hit: 14 (2d8 + 5) Slashing damage plus 9 (2d8) Psychic damage, and the target has Disadvantage on Wisdom saving throws until the end of the dreadmaster's next turn.` },
+    { name: "Dire Bolt", desc: `Ranged Attack Roll: +8, range 120 ft. Hit: 13 (3d8) Psychic damage, and the target has Disadvantage on Wisdom saving throws until the end of the dreadmaster's next turn.` },
+    { name: "Commander's Strike", desc: `One ally that can see or hear the dreadmaster can take a Reaction to make one attack with a weapon or an Unarmed Strike at a target the dreadmaster chooses, adding 9 (2d8) to the attack's damage roll on a hit.` },
+    { name: "Spellcasting", desc: `The dreadmaster casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 16):\n\n2/Day Each: Bane, Command, Hold Person\n1/Day Each: Crusader's Mantle, Destructive Wave (necrotic), Dispel Magic, Fear, Find Steed` }
+  ],
+  bonusActions:    [
+    { name: "Dreadmaster's Presence (Recharge 5–6)", desc: `Wisdom Saving Throw: DC 16, each enemy in a 30-foot Emanation originating from the dreadmaster. Failure: The target has the Frightened and Prone condition until the end of the dreadmaster's next turn.` },
+    { name: "Smite (3/Day)", desc: `The dreadmaster casts Blinding Smite or Staggering Smite, using the same spellcasting ability as Spellcasting.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Foe Hunter",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Ranger)",
+  alignment:       "Any Alignment",
+  cr:              "4 (XP 1,100; PB +2)",
+  initiative:      "+3 (13)",
+  ac:              "15",
+  hp:              "97 (13d8 + 39)",
+  speed:           "30 ft.",
+  str: "16 (+3) +3", dex: "17 (+3) +3", con: "16 (+3) +3",
+  int: "10 (+0) +0", wis: "15 (+2) +2", cha: "10 (+0) +0",
+  gear:            "Longbow, Longsword, Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +4, Stealth +5, Survival +6",
+  senses:          "Passive Perception 14",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The foe hunter makes two attacks, using Longsword or Longbow in any combination.` },
+    { name: "Longsword", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage, or 12 (2d8 + 3) Slashing damage if the target doesn't have all its Hit Points.` },
+    { name: "Longbow", desc: `Ranged Attack Roll: +5, range 150/600 ft. Hit: 7 (1d8 + 3) Piercing damage, or 12 (2d8 + 3) Piercing damage if the target doesn't have all its Hit Points.` }
+  ],
+  bonusActions:    [
+    { name: "Hunter's Mark (2/Day)", desc: `The foe hunter casts Hunter's Mark, requiring no spell components and using Wisdom as the spellcasting ability.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Frost Priest of Auril",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Cleric)",
+  alignment:       "Any Non-Good Alignment",
+  cr:              "6 (XP 2,300; PB +3)",
+  initiative:      "+2 (12)",
+  ac:              "16",
+  hp:              "97 (13d8 + 39)",
+  speed:           "30 ft.",
+  str: "14 (+2) +2", dex: "14 (+2) +2", con: "16 (+3) +6",
+  int: "10 (+0) +0", wis: "18 (+4) +7", cha: "12 (+1) +4",
+  gear:            "Breastplate",
+  saves:           "",
+  resistances:     "Cold",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Religion +6, Survival +7",
+  senses:          "Passive Perception 14",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The priest makes two attacks, using Frost Pick or Frost Ray in any combination.` },
+    { name: "Frost Pick", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d8 + 2) Piercing damage plus 9 (2d8) Cold damage.` },
+    { name: "Frost Ray", desc: `Ranged Attack Roll: +7, range 120 ft. Hit: 9 (2d8) Cold damage.` },
+    { name: "Winter's Bloom (Recharge 5–6)", desc: `The priest conjures an explosion of freezing, ice shards. Constitution Saving Throw: DC 15, each creature in a 20-foot-radius Sphere centered on a point the priest can see within 60 feet. Failure: 27 (6d8) Cold damage, and the target is partially encased in ice. The target has the Restrained condition until the ice encasing it is destroyed (AC 10; HP 20; Immunity to Poison and Psychic damage). Success: Half damage only.` },
+    { name: "Spellcasting", desc: `The priest casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 15):\n\nAt Will: Resistance, Thaumaturgy\n1/Day Each: Banishment, Cone of Cold, Control Water, Ice Storm` }
+  ],
+  bonusActions:    [
+    { name: "Auril's Aid (3/Day)", desc: `The priest casts Armor of Agathys, Dispel Magic, Healing Word, or Sleet Storm, using the same spellcasting ability as Spellcasting.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Hexblade",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Warlock)",
+  alignment:       "Any Alignment",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+3 (13)",
+  ac:              "15",
+  hp:              "90 (12d8 + 36)",
+  speed:           "30 ft.",
+  str: "14 (+2) +2", dex: "16 (+3) +3", con: "16 (+3) +3",
+  int: "12 (+1) +1", wis: "10 (+0) +3", cha: "17 (+3) +6",
+  gear:            "Scimitar, Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Arcana +4, Deception +6",
+  senses:          "Passive Perception 10",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The hexblade makes two attacks, using Scimitar or Hex Bolt in any combination.` },
+    { name: "Scimitar", desc: `Melee Attack Roll: +6, reach 5 ft. Hit: 6 (1d6 + 3) Slashing damage plus 9 (2d8) Psychic damage.` },
+    { name: "Hex Bolt", desc: `Ranged Attack Roll: +6, range 120 ft. Hit: 12 (2d8 + 3) Psychic damage and the target has Disadvantage on D20 Tests until the end of the hexblade's next turn.` },
+    { name: "Spellcasting", desc: `The hexblade casts one of the following spells, using Charisma as the spellcasting ability (spell save DC 14):\n\nAt Will: Minor Illusion, Jump, Prestidigitation, Silent Image\n1/Day Each: Blink, Cone of Cold, Dispel Magic, Phantasmal Killer` }
+  ],
+  bonusActions:    [
+    { name: "Hexblade's Curse (Recharge 5–6)", desc: `Wisdom Saving Throw: DC 14, one creature the hexblade can see within 30 feet. Failure: The target is cursed for 1 minute. Until the curse ends, the target is Vulnerable to the hexblade's melee attack damage.` }
+  ],
+  reactions:       [
+    { name: "Shield (2/Day)", desc: `The hexblade casts Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.` }
+  ],
+  legendary:       []
+},
+{
+  name:            "Hex Knight",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Warlock)",
+  alignment:       "Any Alignment",
+  cr:              "13 (XP 10,000; PB +5)",
+  initiative:      "+9 (19)",
+  ac:              "16",
+  hp:              "195 (23d8 + 92)",
+  speed:           "30 ft.",
+  str: "14 (+2) +2", dex: "18 (+4) +4", con: "18 (+4) +9",
+  int: "14 (+2) +2", wis: "12 (+1) +6", cha: "19 (+4) +10",
+  gear:            "Scimitar, Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Arcana +7, Deception +9, Insight +6",
+  senses:          "Passive Perception 11",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Legendary Resistance (3/Day)", desc: `If the hex knight fails a saving throw, it can choose to succeed instead.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The hex knight makes two attacks, using Scimitar or Hex Bolt in any combination.` },
+    { name: "Scimitar", desc: `Melee Attack Roll: +9, reach 5 ft. Hit: 7 (1d6 + 4) Slashing damage plus 13 (3d8) Psychic damage.` },
+    { name: "Hex Bolt", desc: `Ranged Attack Roll: +9, range 120 ft. Hit: 17 (3d8 + 4) Psychic damage and the target has Disadvantage on D20 Tests until the end of the hex knight's next turn.` },
+    { name: "Spellcasting", desc: `The hex knight casts one of the following spells, using Charisma as the spellcasting ability (spell save DC 17):\n\nAt Will: Minor Illusion, Jump, Prestidigitation, Silent Image\n1/Day Each: Blink, Circle of Death, Cone of Cold, Darkness, Dimension Door, Dispel Magic, Phantasmal Killer` }
+  ],
+  bonusActions:    [
+    { name: "Hexblade's Curse (Recharge 5–6)", desc: `Wisdom Saving Throw: DC 17, one creature the hex knight can see within 30 feet. Failure: The target is cursed for 1 minute. Until the curse ends, the target is Vulnerable to the hex knight's melee attack damage.` }
+  ],
+  reactions:       [
+    { name: "Shield (3/Day)", desc: `The hex knight casts Shield in response to the spell's trigger, using the same spellcasting ability as Spellcasting.` }
+  ],
+  legendary:       [
+    { name: "Legendary Action Uses", desc: `3. Immediately after another creature's turn, the hex knight can expend a use to take one of the following actions. The hex knight regains all expended uses at the start of each of its turns.` },
+    { name: "Bolt", desc: `The hex knight makes one Hex Bolt attack.` },
+    { name: "Lunge", desc: `The hex knight moves up to half its Speed, and it makes one Scimitar attack.` },
+    { name: "Hex Magic", desc: `The hex knight uses Spellcasting to cast Crown of Madness, Darkness, Mind Spike, Mirror Image, or Ray of Enfeeblement. The hex knight can't take this action again until the start of its next turn.` }
+  ]
+},
+{
+  name:            "High Inquisitor",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Paladin)",
+  alignment:       "Any Lawful Alignment",
+  cr:              "14 (XP 11,500; PB +5)",
+  initiative:      "+5 (15)",
+  ac:              "20",
+  hp:              "204 (24d8 + 96)",
+  speed:           "30 ft.",
+  str: "20 (+5) +5", dex: "10 (+0) +0", con: "18 (+4) +9",
+  int: "12 (+1) +1", wis: "14 (+2) +7", cha: "19 (+4) +9",
+  gear:            "Plate Armor, Shield",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Insight +7, Intimidation +14, Religion +6",
+  senses:          "Passive Perception 12",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Legendary Resistance (3/Day)", desc: `If the inquisitor fails a saving throw, it can choose to succeed instead.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The inquisitor uses Glare of Reckoning and makes two Dire Flail attacks. It can replace one attack with a use of Spellcasting to cast Command (level 2 version) or Hold Person.` },
+    { name: "Dire Flail", desc: `Melee Attack Roll: +10, reach 5 ft. Hit: 9 (1d8 + 5) Bludgeoning damage plus 9 (2d8) Psychic damage, and the target has Disadvantage on Wisdom saving throws until the end of the inquisitor's next turn.` },
+    { name: "Glare of Reckoning", desc: `Wisdom Saving Throw: DC 17, one creature the inquisitor can see within 30 feet. Failure: 13 (3d8) Psychic damage, and the target has the Frightened condition until the end of the inquisitor's next turn. While Frightened in this way, the creature has the Paralyzed condition. Success: Half damage only.` },
+    { name: "Spellcasting", desc: `The inquisitor casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17):\n\nAt Will: Bane, Command (level 2 version), Hold Person\n2/Day Each: Dispel Magic, Fear, Zone of Truth` }
+  ],
+  bonusActions:    [
+    { name: "Smite (3/Day)", desc: `The inquisitor casts Banishing Smite, Blinding Smite (level 4 version), Staggering Smite, or Wrathful Smite (level 4 version), using the same spellcasting ability as Spellcasting.` }
+  ],
+  reactions:       [],
+  legendary:       [
+    { name: "Legendary Action Uses", desc: `3. Immediately after another creature's turn, the inquisitor can expend a use to take one of the following actions. The inquisitor regains all expended uses at the start of each of its turns.` },
+    { name: "Charge", desc: `The inquisitor moves up to half its Speed, and it makes one Dire Flail attack.` },
+    { name: "Castigating Magic", desc: `The inquisitor uses Spellcasting to cast Command (level 2 version), Dispel Magic, Fear, or Hold Person. The inquisitor can't take this action again until the start of its next turn.` }
+  ]
+},
+{
+  name:            "Inquisitor",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Paladin)",
+  alignment:       "Any Lawful Alignment",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+0 (10)",
+  ac:              "19",
+  hp:              "97 (13d8 + 39)",
+  speed:           "30 ft.",
+  str: "18 (+4) +4", dex: "10 (+0) +0", con: "16 (+3) +3",
+  int: "10 (+0) +0", wis: "12 (+1) +4", cha: "14 (+2) +5",
+  gear:            "Shield, Splint Mail",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Insight +4, Intimidation +8, Religion +3",
+  senses:          "Passive Perception 11",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The inquisitor makes two Dire Flail attacks. It can replace one attack with a use of Spellcasting to cast Command.` },
+    { name: "Dire Flail", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 8 (1d8 + 4) Bludgeoning damage plus 4 (1d8) Psychic damage, and the target has Disadvantage on Wisdom saving throws until the end of the inquisitor's next turn.` },
+    { name: "Spellcasting", desc: `The inquisitor casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 13):\n\nAt Will: Command\n1/Day Each: Bane, Dispel Magic, Fear, Hold Person, Zone of Truth` }
+  ],
+  bonusActions:    [
+    { name: "Smite (3/Day)", desc: `The inquisitor casts Blinding Smite or Wrathful Smite (level 3 version), using the same spellcasting ability as Spellcasting.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Marshal",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid",
+  alignment:       "Any Alignment",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+2 (12)",
+  ac:              "18",
+  hp:              "97 (13d8 + 39)",
+  speed:           "30 ft.",
+  str: "17 (+3) +6", dex: "14 (+2) +2", con: "16 (+3) +6",
+  int: "10 (+0) +0", wis: "14 (+2) +5", cha: "14 (+2) +2",
+  gear:            "Breastplate, Light Crossbow, Longsword, Shield",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Insight +5, Perception +5",
+  senses:          "Passive Perception 15",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Marshal Allies", desc: `Allies of the marshal's choice (excluding itself) in a 20-foot Emanation originating from it have Advantage on attack rolls and saving throws. It can't use this trait if it has the Incapacitated condition.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The marshal makes three attacks, using Longsword or Light Crossbow in any combination. It can replace one attack with a use of Commander's Strike or Maneuver Allies, if available.` },
+    { name: "Longsword", desc: `Melee Attack Roll: +6, reach 5 ft. Hit: 7 (1d8 + 3) Slashing damage.` },
+    { name: "Light Crossbow", desc: `Ranged Attack Roll: +5, range 80/320 ft. Hit: 6 (1d8 + 2) Piercing damage.` },
+    { name: "Commander's Strike", desc: `One ally that can see or hear the marshal can take a Reaction to make one attack with a weapon or an Unarmed Strike at a target the marshal chooses, adding 9 (2d8) to the attack's damage roll on a hit.` },
+    { name: "Maneuver Allies (Recharge 5–6)", desc: `Each ally within 30 feet of the marshal can take a Reaction to move up to half its Speed without provoking Opportunity Attacks.` }
+  ],
+  bonusActions:    [
+    { name: "Rallying Call (1/Day)", desc: `Up to three allies of the marshal that can see or hear it gain 10 (1d10 + 5) Temporary Hit Points.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Sergeant",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid",
+  alignment:       "Any Alignment",
+  cr:              "1 (XP 200; PB +2)",
+  initiative:      "+0 (10)",
+  ac:              "14",
+  hp:              "22 (4d8 + 4)",
+  speed:           "30 ft.",
+  str: "16 (+3) +3", dex: "11 (+0) +0", con: "13 (+1) +1",
+  int: "10 (+0) +0", wis: "10 (+0) +0", cha: "12 (+1) +1",
+  gear:            "Light Crossbow, Longsword, Scale Mail",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +2",
+  senses:          "Passive Perception 12",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Longsword", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 8 (1d10 + 3) Slashing damage.` },
+    { name: "Light Crossbow", desc: `Ranged Attack Roll: +2, range 80/320 ft. Hit: 4 (1d8) Piercing damage.` },
+    { name: "Commander's Strike", desc: `One ally that can see or hear the sergeant can take a Reaction to make one attack with a weapon or an Unarmed Strike at a target the sergeant chooses, adding 4 (1d8) to the attack's damage roll on a hit.` },
+    { name: "Maneuver Allies (Recharge 5–6)", desc: `Each ally within 30 feet of the sergeant can take a Reaction to move up to half its Speed without provoking Opportunity Attacks.` }
+  ],
+  bonusActions:    [],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Shadow Fist Initiate",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Monk)",
+  alignment:       "Any Non-Good Alignment",
+  cr:              "3 (XP 700; PB +2)",
+  initiative:      "+7 (17)",
+  ac:              "16",
+  hp:              "58 (9d8 + 18)",
+  speed:           "40 ft.",
+  str: "12 (+1) +1", dex: "16 (+3) +5", con: "14 (+2) +2",
+  int: "11 (+0) +0", wis: "16 (+3) +5", cha: "12 (+1) +1",
+  gear:            "Sai, Darts (12)",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Acrobatics +7, Deception +5, Perception +5, Stealth +7",
+  senses:          "Passive Perception 15",
+  languages:       "Common, Thieves' Cant, plus one other language",
+  traits:          [
+    { name: "Evasion", desc: `If the shadow fist is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the shadow fist instead takes no damage if it succeeds on the save and only half damage if it fails. It can't use this trait if it has the Incapacitated condition.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The shadow fist makes two attacks, using Sai or Dart in any combination. It can replace one attack with a use of Spellcasting or Shadow Spike, if available.` },
+    { name: "Sai", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage plus 7 (2d6) Poison damage.` },
+    { name: "Dart", desc: `Ranged Attack Roll: +5, range 20/60 ft. Hit: 5 (1d4 + 3) Piercing damage plus 7 (2d6) Poison damage.` },
+    { name: "Shadow Spike (Recharge 5–6)", desc: `Constitution Saving Throw: DC 13, one creature within 5 feet. Failure: 10 (3d6) Necrotic damage plus 10 (3d6) Psychic damage, and the target has the Stunned condition until the start of the shadow fist's next turn. Success: Half damage only.` },
+    { name: "Spellcasting", desc: `The shadow fist casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 13):\n\n1/Day Each: Darkness, Darkvision, Pass Without Trace, Silence` }
+  ],
+  bonusActions:    [
+    { name: "Cunning Action", desc: `The shadow fist takes the Dash, Disengage, or Hide action.` },
+    { name: "Shadow Step", desc: `While in Dim Light or Darkness, the shadow fist teleports up to 30 feet to an unoccupied space it can see that is in Dim Light or Darkness.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Shadow Fist Assassin",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Monk)",
+  alignment:       "Any Non-Good Alignment",
+  cr:              "9 (XP 5,000; PB +4)",
+  initiative:      "+12 (22)",
+  ac:              "18",
+  hp:              "120 (16d8 + 48)",
+  speed:           "40 ft.",
+  str: "12 (+1) +1", dex: "18 (+4) +8", con: "16 (+3) +3",
+  int: "12 (+1) +1", wis: "18 (+4) +8", cha: "14 (+2) +2",
+  gear:            "Sai, Darts (12)",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Acrobatics +12, Deception +10, Perception +8, Stealth +12",
+  senses:          "Passive Perception 18",
+  languages:       "Common, Thieves' Cant, plus one other language",
+  traits:          [
+    { name: "Evasion", desc: `If the shadow fist is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the shadow fist instead takes no damage if it succeeds on the save and only half damage if it fails. It can’t use this trait if it has the Incapacitated condition.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The shadow fist makes three attacks, using Sai or Dart in any combination. It can replace one attack with a use of Spellcasting or Shadow Spike, if available.` },
+    { name: "Sai", desc: `Melee Attack Roll: +8, reach 5 ft. Hit: 7 (1d6 + 4) Piercing damage plus 17 (5d6) Poison damage, and the target has the Poisoned condition until the start of the shadow fist’s next turn.` },
+    { name: "Dart", desc: `Ranged Attack Roll: +8, range 20/60 ft. Hit: 6 (1d4 + 4) Piercing damage plus 17 (5d6) Poison damage, and the target has the Poisoned condition until the start of the shadow fist’s next turn.` },
+    { name: "Shadow Spike (Recharge 5–6)", desc: `Constitution Saving Throw: DC 16, one creature within 5 feet. Failure: 14 (4d6) Necrotic damage plus 14 (4d6) Psychic damage, and the target has the Stunned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. Success: Half damage only.` },
+    { name: "Spellcasting", desc: `The shadow fist casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 16):\n\n1/Day Each: Darkness, Darkvision, Evard's Black Tentacles, Pass Without Trace, Phantasmal Killer, Silence` }
+  ],
+  bonusActions:    [
+    { name: "Cunning Action", desc: `The shadow fist takes the Dash, Disengage, or Hide action.` },
+    { name: "Shadow Step", desc: `While in Dim Light or Darkness, the shadow fist teleports up to 30 feet to an unoccupied space it can see that is in Dim Light or Darkness.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Shadow Fist Master",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Monk)",
+  alignment:       "Any Non-Good Alignment",
+  cr:              "17 (XP 18,000; PB +6)",
+  initiative:      "+17 (27)",
+  ac:              "20",
+  hp:              "187 (22d8 + 88)",
+  speed:           "50 ft.",
+  str: "13 (+1) +1", dex: "20 (+5) +11", con: "18 (+4) +4",
+  int: "14 (+2) +2", wis: "20 (+5) +11", cha: "17 (+3) +3",
+  gear:            "Sai, Darts (12)",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Acrobatics +17, Deception +15, Perception +11, Stealth +17",
+  senses:          "Passive Perception 21",
+  languages:       "Common, Thieves' Cant, plus one other language",
+  traits:          [
+    { name: "Evasion", desc: `If the shadow fist is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the shadow fist instead takes no damage if it succeeds on the save and only half damage if it fails. It can’t use this trait if it has the Incapacitated condition.` },
+    { name: "Legendary Resistance (3/Day)", desc: `If shadow fist fails a saving throw, it can choose to succeed instead.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The shadow fist makes three attacks, using Sai or Dart in any combination. It can replace one attack with a use of Spellcasting or Shadow Spike, if available.` },
+    { name: "Sai", desc: `Melee Attack Roll: +11, reach 5 ft. Hit: 8 (1d6 + 5) Piercing damage plus 17 (5d6) Poison damage, and the target has the Poisoned condition until the start of the shadow fist’s next turn.` },
+    { name: "Dart", desc: `Ranged Attack Roll: +11, range 20/60 ft. Hit: 7 (1d4 + 5) Piercing damage plus 17 (5d6) Poison damage, and the target has the Poisoned condition until the start of the shadow fist’s next turn.` },
+    { name: "Shadow Spike (Recharge 5–6)", desc: `Constitution Saving Throw: DC 19, one creature within 5 feet. Failure: 21 (6d6) Necrotic damage plus 21 (6d6) Psychic damage, and the target has the Stunned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. Success: Half damage only.` },
+    { name: "Spellcasting", desc: `The shadow fist casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 19):\n\n1/Day Each: Darkness, Darkvision, Evard's Black Tentacles, Pass Without Trace, Phantasmal Killer, Silence, Weird` }
+  ],
+  bonusActions:    [
+    { name: "Cunning Action", desc: `The shadow fist takes the Dash, Disengage, or Hide action.` },
+    { name: "Shadow Step", desc: `While in Dim Light or Darkness, the shadow fist teleports up to 30 feet to an unoccupied space it can see that is in Dim Light or Darkness.` }
+  ],
+  reactions:       [],
+  legendary:       [
+    { name: "Dart", desc: `The shadow fist makes one Dart attack.` },
+    { name: "Lunge", desc: `The shadow fist moves up to half its Speed, and it makes one Sai attack.` },
+    { name: "Shadow Magic", desc: `The shadow fist uses Spellcasting. The shadow fist can’t take this action again until the start of its next turn.` }
+  ]
+},
+{
+  name:            "Skald",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Bard)",
+  alignment:       "Any Non-Lawful Alignment",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+3 (13)",
+  ac:              "15",
+  hp:              "104 (16d8 + 32)",
+  speed:           "30 ft.",
+  str: "12 (+1) +1", dex: "16 (+3) +3", con: "14 (+2) +2",
+  int: "12 (+1) +1", wis: "14 (+2) +5", cha: "17 (+3) +6",
+  gear:            "Rapier, Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Deception +6, Persuasion +6, Performance +6",
+  senses:          "Passive Perception 12",
+  languages:       "Common plus three other languages",
+  traits:          [
+    { name: "Bloodied Frenzy", desc: `While Bloodied, the skald has Advantage on attack rolls and saving throws.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The skald makes two Rapier attacks and uses Bewildering Word. It can replace one attack with a use of Spellcasting.` },
+    { name: "Rapier", desc: `Melee Attack Roll: +6, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage.` },
+    { name: "Bewildering Word", desc: `Wisdom Saving Throw: DC 14, one creature within 60 feet the skald can see. Failure: 9 (2d8) Psychic damage and the target has Disadvantage on attack rolls until the end of the skald's next turn.` },
+    { name: "Spellcasting", desc: `The skald casts one of the following spells, using Charisma as the spellcasting ability (spell save DC 14):\n\nAt Will: Dancing Lights, Mage Hand, Minor Illusion\n2/Day Each: Dissonant Whispers, Hold Person\n1/Day Each: Confusion, Enthrall, Fear, Mass Cure Wounds` }
+  ],
+  bonusActions:    [],
+  reactions:       [
+    { name: "Counterspell (2/Day)", desc: `The skald casts Counterspell in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.` },
+    { name: "Distracting Taunt (2/Day)", desc: `Trigger: An enemy that the skald can see and can hear and understand the skald makes a D20 Test roll. Response: The skald imposes Disadvantage on the D20 Test roll.` }
+  ],
+  legendary:       []
+},
+{
+  name:            "Skirmisher",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid",
+  alignment:       "Any Alignment",
+  cr:              "1 (XP 200; PB +2)",
+  initiative:      "+3 (13)",
+  ac:              "15",
+  hp:              "26 (4d8 + 8)",
+  speed:           "30 ft.",
+  str: "10 (+0) +0", dex: "17 (+3) +3", con: "14 (+2) +2",
+  int: "10 (+0) +0", wis: "13 (+1) +1", cha: "11 (+0) +0",
+  gear:            "Shortsword, Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +3, Stealth +5",
+  senses:          "Passive Perception 13",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Skirmish Advantage", desc: `Immediately after ending its movement 15+ feet from the space it started its turn, the skirmisher has Advantage on the next attack roll it makes before the end of its turn. The skirmisher can only gain this Advantage once per turn.` }
+  ],
+  actions:         [
+    { name: "Shortsword", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 6 (1d6 + 3) Piercing damage.` },
+    { name: "Shortbow", desc: `Ranged Attack Roll: +5, range 80/320 ft. Hit: 6 (1d6 + 3) Piercing damage.` }
+  ],
+  bonusActions:    [
+    { name: "Lightfooted", desc: `The skirmisher takes the Dash or Disengage action.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Skirmisher, Elite",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid",
+  alignment:       "Any Alignment",
+  cr:              "4 (XP 1,100; PB +2)",
+  initiative:      "+5 (15)",
+  ac:              "16",
+  hp:              "90 (12d8 + 36)",
+  speed:           "30 ft.",
+  str: "10 (+0) +0", dex: "20 (+5) +5", con: "16 (+3) +3",
+  int: "10 (+0) +0", wis: "14 (+2) +2", cha: "11 (+0) +0",
+  gear:            "Shortsword, Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +4, Stealth +7",
+  senses:          "Passive Perception 14",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Skirmish Advantage", desc: `Immediately after ending its movement 15+ feet from the space it started its turn, the skirmisher has Advantage on the next attack roll it makes before the end of its turn. The skirmisher can only gain this Advantage once per turn.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The skirmisher makes two attacks, using Shortsword or Shortbow in any combination.` },
+    { name: "Shortsword", desc: `Melee Attack Roll: +7, reach 5 ft. Hit: 8 (1d6 + 5) Piercing damage, plus 7 (2d6) Piercing damage if the attack roll has Advantage.` },
+    { name: "Shortbow", desc: `Ranged Attack Roll: +7, range 80/320 ft. Hit: 8 (1d6 + 5) Piercing damage, plus 7 (2d6) Piercing damage if the attack roll has Advantage.` }
+  ],
+  bonusActions:    [
+    { name: "Lightfooted", desc: `The skirmisher takes the Dash or Disengage action.` }
+  ],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Storm Priest",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Cleric)",
+  alignment:       "Any Chaotic Alignment",
+  cr:              "4 (XP 1,100; PB +2)",
+  initiative:      "+2 (12)",
+  ac:              "18",
+  hp:              "82 (11d8 + 33)",
+  speed:           "30 ft.",
+  str: "16 (+3) +3", dex: "14 (+2) +2", con: "16 (+3) +5",
+  int: "10 (+0) +0", wis: "17 (+3) +5", cha: "14 (+2) +5",
+  gear:            "Breastplate, Shield",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Perception +5, Religion +2",
+  senses:          "Passive Perception 15",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The priest makes two attacks, using Warhammer or Storm Strike in any combination.` },
+    { name: "Warhammer", desc: `Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Bludgeoning damage plus 9 (2d8) Thunder damage, and the target has the Deafened condition until the start of the priest's next turn.` },
+    { name: "Storm Strike", desc: `Ranged Attack Roll: +5, range 120 feet. Hit: 13 (3d8) Thunder damage. If the target is a Large or smaller creature, it has the Prone condition.` },
+    { name: "Spellcasting", desc: `The priest casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 13):\n\nAt Will: Mending, Resistance, Thaumaturgy\n2/Day Each: Call Lightning, Gust of Wind, Thunderwave\n1/Day Each: Banishment, Control Water, Cure Wounds, Ice Storm` }
+  ],
+  bonusActions:    [],
+  reactions:       [
+    { name: "Wrath of the Storm (3/Day)", desc: `Trigger: An enemy creature the priest can see moves within 30 feet of the priest. Response—Dexterity Saving Throw: DC 13, the triggering creature. Failure: 13 (3d8) Thunder damage. If the target is a Large or smaller creature, it has the Prone condition.` }
+  ],
+  legendary:       []
+},
+{
+  name:            "Storm Shaman",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Druid)",
+  alignment:       "Any Chaotic Alignment",
+  cr:              "4 (XP 1,100; PB +2)",
+  initiative:      "+2 (12)",
+  ac:              "14",
+  hp:              "75 (10d8 + 30)",
+  speed:           "30 ft.",
+  str: "12 (+1) +1", dex: "14 (+2) +2", con: "16 (+3) +5",
+  int: "10 (+0) +0", wis: "18 (+4) +6", cha: "11 (+0) +0",
+  gear:            "Studded Leather Armor",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Nature +4, Perception +6, Survival +6",
+  senses:          "Passive Perception 16",
+  languages:       "Common plus one other language",
+  traits:          [],
+  actions:         [
+    { name: "Multiattack", desc: `The shaman makes two attacks, using Storm Staff or Storm Strike in any combination. It can replace one attack with a use of Spellcasting.` },
+    { name: "Storm Staff", desc: `Melee Attack Roll: +6, reach 5 ft. Hit: 8 (1d8 + 4) Bludgeoning damage plus 4 (1d8) Thunder damage.` },
+    { name: "Storm Strike", desc: `Ranged Attack Roll: +6, range 120 feet. Hit: 13 (3d8) Thunder damage. If the target is a Large or smaller creature, it has the Prone condition.` },
+    { name: "Spellcasting", desc: `The shaman casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability:\n\nAt Will: Druidcraft, Elementalism\n2/Day Each: Cure Wounds, Entangle, Thunderwave\n1/Day Each: Call Lightning, Ice Storm, Shatter` },
+    { name: "Cyclone Blast (1/Day)", desc: `Strength Saving Throw: DC 14, each creature and each object that isn’t being worn or carried in a 30-foot-long, 10-foot-wide Line. Failure: 22 (5d8) Thunder damage, and if the target is a Large or smaller creature, the target is pushed up to 30 feet straight away from the shaman and has the Prone condition. Success: Half damage only.` }
+  ],
+  bonusActions:    [],
+  reactions:       [],
+  legendary:       []
+},
+{
+  name:            "Storm Sorcerer",
+  category:        "Creature",
+  type:            "Medium or Small Humanoid (Sorcerer)",
+  alignment:       "Any Chaotic Alignment",
+  cr:              "5 (XP 1,800; PB +3)",
+  initiative:      "+2 (12)",
+  ac:              "15",
+  hp:              "78 (12d8 + 24)",
+  speed:           "30 ft.",
+  str: "10 (+0) +0", dex: "15 (+2) +2", con: "14 (+2) +2",
+  int: "13 (+1) +1", wis: "12 (+1) +4", cha: "18 (+4) +7",
+  gear:            "Component Pouch",
+  saves:           "",
+  resistances:     "",
+  immunities:      "",
+  vulnerabilities: "",
+  skills:          "Arcana +4, Nature +4",
+  senses:          "Passive Perception 11",
+  languages:       "Common plus one other language",
+  traits:          [
+    { name: "Heart of the Storm", desc: `When the sorcerer casts Cacophonic Shield, Lightning Bolt, Shatter, or Thunderwave, all other creatures within 10 feet of the sorcerer each take 5 (1d10) Lightning damage.` }
+  ],
+  actions:         [
+    { name: "Multiattack", desc: `The sorcerer makes two Shock Burst attacks.` },
+    { name: "Shock Burst", desc: `Melee or Ranged Attack Roll: +7, reach 5 ft. or range 90 ft. Hit: 11 (2d10) Lightning damage and the target can't take Reactions until the end of the sorcerer's next turn.` },
+    { name: "Storm Fall (Recharge 5–6)", desc: `Dexterity Saving Throw: DC 15, each creature in a 20-foot-radius, 40-foot-high Cylinder originating from a point the sorcerer can see within 500 feet. Failure: 11 (2d10) Lightning damage and 11 (2d10) Thunder damage. Success: Half damage.` },
+    { name: "Spellcasting", desc: `The sorcerer casts one of the following spells, using Charisma as the spellcasting ability (spell save DC 15):\n\nAt Will: Light, Mage Armor (included in AC), Mage Hand\n1/Day Each: Cacophonic Shield, Fly, Gust of Wind, Ice Storm, Lightning Bolt, Shatter, Thunderwave (level 2 version)` }
+  ],
+  bonusActions:    [
+    { name: "Quickened Spell (2/Day)", desc: `The sorcerer uses Spellcasting.` }
+  ],
+  reactions:       [
+    { name: "Protective Magic (2/Day)", desc: `The sorcerer casts Counterspell or Shield in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.` }
+  ],
+  legendary:       []
+},
 {
   name:            "Ape",
   category:        "Creature",

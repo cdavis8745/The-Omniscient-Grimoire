@@ -7020,11 +7020,6 @@ const rules = [
   },
 
   {
-    name:        "Weapon Properties and Masteries",
-    category:    "Rule",
-    description: `<p>Here are definitions of the properties in the Properties column of the Weapons table.</p> <p><b>Ammunition.</b> You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.</p> <p><b>Finesse.</b> When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.</p> <p><b>Heavy.</b> You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13, or if it's a Ranged weapon and your Dexterity score isn't at least 13.</p> <p><b>Light.</b> When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don't add your ability modifier to the extra attack's damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.</p> <p><b>Loading.</b> You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make.</p> <p><b>Range.</b> A Range weapon has a range in parentheses after the Ammunition or Thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second is the weapon's long range. When attacking a target beyond normal range, you have Disadvantage on the attack roll. You can't attack a target beyond the long range.</p> <p><b>Reach.</b> A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.</p> <p><b>Thrown.</b> If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon.</p> <p><b>Two-Handed.</b> A Two-Handed weapon requires two hands when you attack with it.</p> <p><b>Versatile.</b> A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack.</p> <p>Each weapon also has a mastery property, which is usable only by a character who has a feature, such as Weapon Mastery, that unlocks the property for the character. The properties are defined below.</p> <p><b>Cleave.</b> If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.</p> <p><b>Graze.</b> If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.</p> <p><b>Nick.</b> When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.</p> <p><b>Push.</b> If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.</p> <p><b>Sap.</b> If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.</p> <p><b>Slow.</b> If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.</p> <p><b>Topple.</b> If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.</p> <p><b>Vex.</b> If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.</p>`, },
-
-  {
     name:        "Vision and Light",
     category:    "Rule",
     description: `<p>The presence or absence of light determines the category of illumination in an area, as defined below.</p> <p><b>Bright Light.</b> Bright Light lets most creatures see normally. Even gloomy days provide Bright Light, as do torches, lanterns, fires, and other sources of illumination within a specific radius.</p> <p><b>Dim Light.</b> Dim Light, also called shadows, creates a Lightly Obscured area. An area of Dim Light is usually a boundary between Bright Light and surrounding Darkness. The soft light of twilight and dawn also counts as Dim Light. A full moon might bathe the land in Dim Light.</p> <p><b>Darkness.</b> Darkness creates a Heavily Obscured area. Characters face Darkness outdoors at night (even most moonlit nights), within the confines of an unlit dungeon, or in an area of magical Darkness.</p>`
@@ -7037,9 +7032,216 @@ const rules = [
   },
 
   {
-    name:        "Conditions",
-    category:    "Rule",
-    description: `<p>List of Conditions</p> <p><b><i>BLINDED</i></b> - While you have the Blinded condition, you experience the following effects.<br> <b>Can't See.</b> You can't see and automatically fail any ability check that requires sight.<br> <b>Attacks Affected.</b> Attack rolls against you have Advantage, and your attack rolls have Disadvantage.</p> <p><b><i>CHARMED</i></b> - While you have the Charmed condition, you experience the following effects.<br> <b>Can't Harm the Charmer.</b> You can't attack the charmer or target the charmer with damaging abilities or magical effects.<br> <b>Social Advantage.</b> The charmer has Advantage on any ability check to interact with you socially. </p> <p><b><i>DEAFENED</i></b> - While you have the Deafened condition, you experience the following effect.<br> <b>Can't Hear.</b> You can't hear and automatically fail any ability check that requires hearing. </p> <p><b><i>EXAUSTION</i></b> - While you have the Exhaustion condition, you experience the following effects.<br> <b>Exhaustion Levels.</b> This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.<br> <b>D20 Tests Affected.</b> When you make a D2O Test, the roll is reduced by 2 times your Exhaustion level.<br> <b>Speed Reduced.</b> Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.<br> <b>Removing Exhaustion Levels.</b> Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.</p> <p><b><i>FRIGHTENED</i></b> - While you have the Frightened condition, you experience the following effects.<br> <b>Ability Checks and Attacks Affected.</b> You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.<br> <b>Can't Approach.</b> You can't willingly move closer to the source of fear. </p> <p><b><i>GRAPPLED</i></b> - While you have the Grappled condition, you experience the following effects.<br> <b>Speed 0.</b> Your Speed is O and can't increase.<br> <b>Attacks Affected.</b> You have Disadvantage on attack rolls against any target other than the grappler.<br> <b>Movable.</b> The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it.</p> <p><b><i>INCAPACITATED</i></b> - While you have the Incapacitated condition, you experience the following effects.<br> <b>Inactive.</b> You can't take any action, Bonus Action, or Reaction.<br> <b>No Concentration.</b> Your Concentration is broken. Speechless. You can't speak.<br> <b>Surprised.</b> If you're Incapacitated when you roll Initiative, you have Disadvantage on the roll. </p> <p><b><i>INVISIBLE</i></b> - While you have the Invisible condition, you experience the following effects.<br> <b>Surprise.</b> If you're Invisible when you roll Initiative, you have Advantage on the roll.<br> <b>Concealed.</b> You aren't affected by any effect that requires its target to be seen unless the effect's creator can somehow see you. Any equipment you are wearing or carrying is also concealed.<br> <b>Attacks Affected.</b> Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don't gain this benefit against that creature. </p> <p><b><i>PARALYZED</i></b> - While you have the Paralyzed condition, you experience the following effects.<br> <b>Incapacitated.</b> You have the Incapacitated condition.<br> <B>Speed 0.</b> Your Speed is O and can't increase.<br> <b>Saving Throws Affected.</b> You automatically fail Strength and Dexterity saving throws.<br> <b>Attacks Affected.</b> Attack rolls against you have Advantage.<br> <b>Automatic Critical Hits.</b> Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you. </p> <p><b><i>PETRIFIED</i></b> - While you have the Petrified condition, you experience the following effects.<br> <b>Turned to Inanimate Substance.</b> You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.<br> <b>Incapacitated.</b> You have the Incapacitated condition.<br> <b>Speed 0.</b> Your Speed is O and can't increase.<br> <b>Attacks Affected.</b> Attack rolls against you have Advantage.<br> <b>Saving Throws Affected.</b> You automatically fail Strength and Dexterity saving throws.<br> <b>Resist Damage.</b> You have Resistance to all damage.<br> <b>Poison Immunity.</b> You have Immunity to the Poisoned condition. </p> <p><b><i>POISONED</i></b> - While you have the Poisoned condition, you experience the following effect.<br> <b>Ability Checks and Attacks Affected.</b> You have Disadvantage on attack rolls and ability checks.  </p> <p><b><i>PRONE</i></b> - While you have the Prone condition, you experience the following effects.<br> <b>Restricted Movement.</b> Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can't right yourself.<br> <b>Attacks Affected.</b> You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage. </p> <p><b><i>RESTRAINED</i></b> - While you have the Restrained condition, you experience the following effects.<br> <b>Speed 0.</b> Your Speed is O and can't increase. Attacks Affected. Attack rolls against you have Advantage, and your attack rolls have Disadvantage.<br> <b>Saving Throws Affected.</b> You have Disadvantage on Dexterity saving throws</p> <p><b><i>STUNNED</i></b> - While you have the Stunned condition, you experience the following effects.<br> <b>Incapacitated.</b> You have the Incapacitated condition.<br> <b>Saving Throws Affected.</b> You automatically fail Strength and Dexterity saving throws.<br> <b>Attacks Affected.</b> Attack rolls against you have Advantage. </p> <p><b><i>UNCONSCIOUS</i></b> - While you have the Unconscious condition, you experience the following effects.<br> <b>Inert.</b> You have the Incapacitated and Prone conditions, and you drop whatever you're holding. When this condition ends, you remain Prone.<br> <b>Speed 0.</b> Your Speed is O and can't increase. Attacks Affected. Attack rolls against you have Advantage.<br> <b>Saving Throws Affected.</b> You automatically fail Strength and Dexterity saving throws.<br> <b>Automatic Critical Hits.</b> Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.<br> <b>Unaware.</b> You're unaware of your surroundings. </p>` },
+    name:       "Blinded Condition",
+    category:   "Rule",
+    description: '<p><b>Can’t See.</b> You can’t see and automatically fail any ability check that requires sight.</p> <p><b>Attacks Affected.</b> Attack rolls against you have Advantage, and your attack rolls have Disadvantage.</p>',
+
+  },
+
+  {
+    name:       "Charmed Condition",
+    category:   "Rule",
+    description: "<p><b>Can’t Harm the Charmer.</b> You can’t attack the charmer or target the charmer with damaging abilities or magical effects.</p> <p><b>Social Advantage.</b> The charmer has Advantage on any ability check to interact with you socially.</p>",
+  },
+
+  {
+    name:       "Deafened Condition",
+    category:   "Rule",
+    description: "<b>Can’t Hear.</b> You can’t hear and automatically fail any ability check that requires hearing.",
+
+  },
+
+  {
+    name:       "Exaustion Condition",
+    category:   "Rule",
+    description: "<p><b>Exhaustion Levels.</p> This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.</p> <p><b>D20 Tests Affected.</b> When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level.</p> <p><b>Speed Reduced.</b> Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.</p> <p><b>Removing Exhaustion Levels.</b> Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.</p> ",
+
+  },
+
+  {
+    name:       "Frightened Condition",
+    category:   "Rule",
+    description: "<p><b>Ability Checks and Attacks Affected.</b> You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.</p> <p><b>Can’t Approach.</b> You can’t willingly move closer to the source of fear.</p>",
+
+  },
+
+  {
+    name:       "Grappled Condition",
+    category:   "Rule",
+    description: "<p><b>Speed 0.</b> Your Speed is 0 and can’t increase.</p> <p><b>Attacks Affected.</b> You have Disadvantage on attack rolls against any target other than the grappler.</p> <p><b>Movable.</b> The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it.</p>",
+
+  },
+
+  {
+    name:       "Incapacitated Condition",
+    category:   "Rule",
+    description: "<p><b>Inactive.</b> You can’t take any action, Bonus Action, or Reaction.</p> <p><b>No Concentration.</b> Your Concentration is broken.</p> <p><b>Speechless.</b> You can’t speak.</p> <p><b>Surprised.</b> If you’re Incapacitated when you roll Initiative, you have Disadvantage on the roll.</p>",
+
+  },
+
+  {
+    name:       "Invisible Condition",
+    category:   "Rule",
+    description: "<p><b>Surprise.</b> If you’re Invisible when you roll Initiative, you have Advantage on the roll.</p> <p><b>Concealed.</b> You aren’t affected by any effect that requires its target to be seen unless the effect’s creator can somehow see you. Any equipment you are wearing or carrying is also concealed.</p> <p><b>Attacks Affected.</b> Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don’t gain this benefit against that creature.</p>",
+
+  },
+
+  {
+    name:       "Paralyzed Condition",
+    category:   "Rule",
+    description: "<p><b>Incapacitated.</b> You have the Incapacitated condition.</p> <p><b>Speed 0.</b> Your Speed is 0 and can’t increase.</p> <p><b>Saving Throws Affected.</b> You automatically fail Strength and Dexterity saving throws.</p> <p><b>Attacks Affected.</b> Attack rolls against you have Advantage.</p> <p><b>Automatic Critical Hits.</b> Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.</p>",
+
+  },
+
+  {
+    name:       "Petrified Condition",
+    category:   "Rule",
+    description: "<p><b>Turned to Inanimate Substance.</b> You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.</p> <p><b>Incapacitated.</b> You have the Incapacitated condition.</p> <p><b>Speed 0.</b> Your Speed is 0 and can’t increase.</p> <p><b>Attacks Affected.</b> Attack rolls against you have Advantage.</p> <p><b>Saving Throws Affected.</b> You automatically fail Strength and Dexterity saving throws.</p> <p><b>Resist Damage.</b> You have Resistance to all damage.</p> <p><b>Poison Immunity.</b> You have Immunity to the Poisoned condition.</p>",
+
+  },
+
+  {
+    name:       "Poisoned Condition",
+    category:   "Rule",
+    description: "<b>Ability Checks and Attacks Affected.</b> You have Disadvantage on attack rolls and ability checks.",
+
+  },
+
+  {
+    name:       "Prone Condition",
+    category:   "Rule",
+    description: "<p><b>Restricted Movement.</b> Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can’t right yourself.</p> <p><b>Attacks Affected.</b> You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.</p>",
+
+  },
+
+  {
+    name:       "Restrained Condition",
+    category:   "Rule",
+    description: "<p><b>Speed 0.</b> Your Speed is 0 and can’t increase.</p> <p><b>Attacks Affected.</b> Attack rolls against you have Advantage, and your attack rolls have Disadvantage.</p> <p><b>Saving Throws Affected.</b> You have Disadvantage on Dexterity saving throws.</p>",
+
+  },
+
+  {
+    name:       "Stunned Condition",
+    category:   "Rule",
+    description: "<p><b>Incapacitated.</b> You have the Incapacitated condition.</p> <p><b>Saving Throws Affected.</b> You automatically fail Strength and Dexterity saving throws.</p> <p><b>Attacks Affected.</b> Attack rolls against you have Advantage.</p>",
+
+  },
+
+  {
+    name:       "Unconscious Condition",
+    category:   "Rule",
+    description: "<p><b>Inert.</b> You have the Incapacitated and Prone conditions, and you drop whatever you’re holding. When this condition ends, you remain Prone.</p> <p><b>Speed 0.</b> Your Speed is 0 and can’t increase.</p> <p><b>Attacks Affected.</b> Attack rolls against you have Advantage.</p> <p><b>Saving Throws Affected.</b> You automatically fail Strength and Dexterity saving throws.</p> <p><b>Automatic Critical Hits.</b> Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.</p> <p><b>Unaware.</b> You’re unaware of your surroundings.</p>",
+
+  },
+  
+  {
+    name:       "Cleave Mastery",
+    category:   "Rule",
+    description: "If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon’s damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.",
+  },
+ 
+  {
+    name:       "Graze Mastery",
+    category:   "Rule",
+    description: "If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",
+  },
+ 
+  {
+    name:       "Nick Mastery",
+    category:   "Rule",
+    description: "When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.",
+  },
+ 
+  {
+    name:       "Push Mastery",
+    category:   "Rule",
+    description: "If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+  },
+ 
+  {
+    name:       "Sap Mastery",
+    category:   "Rule",
+    description: "If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.",
+  },
+ 
+  {
+    name:       "Slow Mastery",
+    category:   "Rule",
+    description: "If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn’t exceed 10 feet.",
+  },
+ 
+  {
+    name:       "Topple Mastery",
+    category:   "Rule",
+    description: "If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.",
+  },
+ 
+  {
+    name:       "Vex Mastery",
+    category:   "Rule",
+    description: "If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.",
+  },
+ 
+  {
+    name:       "Ammunition Property",
+    category:   "Rule",
+    description: "You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+  },
+ 
+  {
+    name:       "Finesse Property",
+    category:   "Rule",
+    description: "When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+  },
+ 
+  {
+    name:       "Heavy Property",
+    category:   "Rule",
+    description: "You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13 or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+  },
+ 
+  {
+    name:       "Light Property",
+    category:   "Rule",
+    description: "When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don’t add your ability modifier to the extra attack’s damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don't add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.",
+  },
+ 
+  {
+    name:       "Loading Property",
+    category:   "Rule",
+    description: "You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make.",
+  },
+ 
+  {
+    name:       "Range Property",
+    category:   "Rule",
+    description: "A Range weapon has a range in parentheses after the Ammunition or Thrown property. The range lists two numbers. The first is the weapon’s normal range in feet, and the second is the weapon’s long range. When attacking a target beyond normal range, you have Disadvantage on the attack roll. You can't attack a target beyond the long range.",
+  },
+ 
+  {
+    name:       "Reach Property",
+    category:   "Rule",
+    description: "A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.",
+  },
+ 
+  {
+    name:       "Thrown Property",
+    category:   "Rule",
+    description: "If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon.",
+  },
+ 
+  {
+    name:       "Two-Handed Property",
+    category:   "Rule",
+    description: "A Two-Handed weapon requires two hands when you attack with it.",
+  },
+ 
+  {
+    name:       "Versatile Property",
+    category:   "Rule",
+    description: "A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack.",
+  },
 
   {
     name:        "Wild Magic Table",
@@ -7218,7 +7420,7 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d4 Bludgeoning",
     properties:  "Light",
-    description: "",
+    description: "Mastery: Slow",
   },
 
   {
@@ -7228,7 +7430,7 @@ const equipment = [
     weight:      "1 lb.",
     damage:      "1d4 Piercing",
     properties:  "Finesse, Light, Thrown (Range 20/60)",
-    description: "",
+    description: "Mastery: Nick",
   },
 
   {
@@ -7238,7 +7440,7 @@ const equipment = [
     weight:      "10 lb.",
     damage:      "1d8 Bludgeoning",
     properties:  "Two-Handed",
-    description: "",
+    description: "Mastery: Push",
   },
 
   {
@@ -7248,7 +7450,7 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d6 Slashing",
     properties:  "Light, Thrown (Range 20/60)",
-    description: "",
+    description: "Mastery: Vex",
   },
 
   {
@@ -7258,7 +7460,7 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d6 Piercing",
     properties:  "Thrown (Range 30/120)",
-    description: "",
+    description: "Mastery: Slow",
   },
 
   {
@@ -7268,7 +7470,7 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d4 Bludgeoning",
     properties:  "Light, Thrown (Range 20/60)",
-    description: "",
+    description: "Mastery: Nick",
   },
 
   {
@@ -7278,7 +7480,7 @@ const equipment = [
     weight:      "4 lb.",
     damage:      "1d6 Bludgeoning",
     properties:  "-",
-    description: "",
+    description: "Mastery: Sap",
   },
 
   {
@@ -7288,7 +7490,7 @@ const equipment = [
     weight:      "4 lb.",
     damage:      "1d6 Bludgeoning",
     properties:  "Versatile (1d8)",
-    description: "",
+    description: "Mastery: Topple",
   },
 
   {
@@ -7298,7 +7500,7 @@ const equipment = [
     weight:      "2 lb..",
     damage:      "1d4 Slashing",
     properties:  "Light",
-    description: "",
+    description: "Mastery: Nick",
   },
 
   {
@@ -7308,7 +7510,7 @@ const equipment = [
     weight:      "3 lb.",
     damage:      "1d6 Piercing",
     properties:  "Thrown (Range 20/60), Versatile (1d8)",
-    description: "",
+    description: "Mastery: Sap",
   },
 
   {
@@ -7318,7 +7520,7 @@ const equipment = [
     weight:      "1/4 lb.",
     damage:      "1d4 Piercing",
     properties:  "Finesse, Thrown (Range 20/60)",
-    description: "",
+    description: "Mastery: Vex",
   },
 
   {
@@ -7328,7 +7530,7 @@ const equipment = [
     weight:      "5 lb.",
     damage:      "1d8 Piercing",
     properties:  "Ammunition (Range 80/320; Bolt), Loading, Two-Handed",
-    description: "",
+    description: "Mastery: Slow",
   },
 
   {
@@ -7338,7 +7540,7 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d6 Piercing",
     properties:  "Ammunition (Range 80/320; Arrow), Two-Handed",
-    description: "",
+    description: "Mastery: Vex",
   },
 
   {
@@ -7348,7 +7550,7 @@ const equipment = [
     weight:      "-",
     damage:      "1d4 Bludgeoning",
     properties:  "Ammunition (Range 30/120; Bullet)",
-    description: "",
+    description: "Mastery: Slow",
   },
 
   {
@@ -7358,7 +7560,7 @@ const equipment = [
     weight:      "4 lb.",
     damage:      "1d8 Slashing",
     properties:  "Versatile (1d10)",
-    description: "",
+    description: "Mastery: Topple",
   },
 
   {
@@ -7368,7 +7570,7 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d8 Bludgeoning",
     properties:  "-",
-    description: "",
+    description: "Mastery: Sap",
   },
 
   {
@@ -7378,7 +7580,7 @@ const equipment = [
     weight:      "6 lb.",
     damage:      "1d10 Slashing",
     properties:  "Heavy, Reach, Two-Handed",
-    description: "",
+    description: "Mastery: Graze",
   },
 
   {
@@ -7388,7 +7590,7 @@ const equipment = [
     weight:      "7 lb.",
     damage:      "1d12",
     properties:  "Heavy, Two-Handed",
-    description: "",
+    description: "Mastery: Cleave",
   },
 
   {
@@ -7398,7 +7600,7 @@ const equipment = [
     weight:      "6 lb.",
     damage:      "2d6 Slashing",
     properties:  "Heavy, Two-Handed",
-    description: "",
+    description: "Mastery: Graze",
   },
 
   {
@@ -7408,7 +7610,7 @@ const equipment = [
     weight:      "6 lb.",
     damage:      "1d10 Slashing",
     properties:  "Heavy, Reach, Two-Handed",
-    description: "",
+    description: "Mastery: Cleave",
   },
 
   {
@@ -7418,7 +7620,7 @@ const equipment = [
     weight:      "6 lb.",
     damage:      "1d10 Piercing",
     properties:  "Heavy, Reach, Two-Handed (unless mounted)",
-    description: "",
+    description: "Mastery: Topple",
   },
 
   {
@@ -7428,7 +7630,7 @@ const equipment = [
     weight:      "3 lb.",
     damage:      "1d8",
     properties:  "Versatile (1d10)",
-    description: "",
+    description: "Mastery: Sap",
   },
 
   {
@@ -7438,7 +7640,7 @@ const equipment = [
     weight:      "10 lb.",
     damage:      "2d6 Bludgeoning",
     properties:  "Heavy, Two-Handed",
-    description: "",
+    description: "Mastery: Topple",
   },
 
   {
@@ -7448,7 +7650,7 @@ const equipment = [
     weight:      "4 lb.",
     damage:      "1d8 Piercing",
     properties:  "-",
-    description: "",
+    description: "Mastery: Sap",
   },
 
   {
@@ -7458,7 +7660,7 @@ const equipment = [
     weight:      "18 lb.",
     damage:      "1d10 Piercing",
     properties:  "Heavy, Reach, Two-Handed",
-    description: "",
+    description: "Mastery: Push",
   },
 
   {
@@ -7468,7 +7670,7 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d8 Piercing",
     properties:  "Finesse",
-    description: "",
+    description: "Mastery: Vex",
   },
 
   {
@@ -7478,7 +7680,7 @@ const equipment = [
     weight:      "3 lb.",
     damage:      "1d6 Slashing",
     properties:  "Finesse, Light",
-    description: "",
+    description: "Mastery: Nick",
   },
 
   {
@@ -7488,7 +7690,7 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d6 Piercing",
     properties:  "Finesse, Light",
-    description: "",
+    description: "Mastery: Vex",
   },
 
   {
@@ -7498,7 +7700,7 @@ const equipment = [
     weight:      "4 lb.",
     damage:      "1d8 Piercing",
     properties:  "Thrown (Range 20/60), Versatile (1d10)",
-    description: "",
+    description: "Mastery: Topple",
   },
 
   {
@@ -7508,7 +7710,7 @@ const equipment = [
     weight:      "5 lb.",
     damage:      "1d8 Bludgeoning",
     properties:  "Versatile (1d10)",
-    description: "",
+    description: "Mastery: Push",
   },
 
   {
@@ -7518,7 +7720,7 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d8 Piercing",
     properties:  "Versatile (1d10)",
-    description: "",
+    description: "Mastery: Sap",
   },
 
   {
@@ -7528,7 +7730,7 @@ const equipment = [
     weight:      "3 lb.",
     damage:      "1d4 Slashing",
     properties:  "Finesse, Reach",
-    description: "",
+    description: "Mastery: Slow",
   },
 
   {
@@ -7538,7 +7740,7 @@ const equipment = [
     weight:      "3 lb.",
     damage:      "1 Piercing",
     properties:  "Ammunition (Range 25/100; Needle), Loading",
-    description: "",
+    description: "Mastery: Vex",
   },
 
   {
@@ -7548,7 +7750,7 @@ const equipment = [
     weight:      "3 lb.",
     damage:      "1d6 Piercing",
     properties:  "Ammunition (Range 30/120; Bolt), Light, Loading",
-    description: "",
+    description: "Mastery: Vex",
   },
 
   {
@@ -7558,7 +7760,7 @@ const equipment = [
     weight:      "18 lb.",
     damage:      "1d10 Piercing",
     properties:  "Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed",
-    description: "",
+    description: "Mastery: Push",
   },
 
   {
@@ -7568,17 +7770,27 @@ const equipment = [
     weight:      "2 lb.",
     damage:      "1d8 Piercing",
     properties:  "Ammunition (Range 150/600; Arrow), Heavy, Two-Handed",
-    description: "",
+    description: "Mastery: Slow",
   },
 
   {
     name:        "Musket",
     category:    "Weapon",
     cost:        "500 GP",
+    weight:      "10 lb.",
+    damage:      "1d12 Piercing",
+    properties:  "Ammunition (Range 40/120; Bullet), Loading, Two-Handed",
+    description: "Mastery: Slow",
+  },
+
+  {
+    name:        "Pistol",
+    category:    "Weapon",
+    cost:        "250 GP",
     weight:      "3 lb.",
     damage:      "1d10 Piercing",
     properties:  "Ammunition (Range 30/90; Bullet), Loading",
-    description: "",
+    description: "Mastery: Vex",
   },
 
   {
